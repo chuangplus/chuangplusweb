@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="chuangplus">
+<head>
+    <meta charset="utf-8">
+	<title>创加 | 高校创业融资平台</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="创加 创+ 创业 融资 高校 投资 大学生 ">
+
+    <!-- Loading Bootstrap -->
+    <link href="../static/css/vendor/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Loading Flat UI -->
+    <link href="../static/css/flat-ui.min.css" rel="stylesheet">
+	
+	
+	<!-- FlexSlider pieces -->
+	<link rel="stylesheet" href="../static/css/flexslider.css" type="text/css" media="screen" />
+	<script type='text/javascript' src='http://ajax.useso.com/ajax/libs/jquery/1.7.2/jquery.min.js'></script>
+	<script src="../static/js/jquery.flexslider-min.js"></script>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+
+	
+	<!-- Hook up the FlexSlider -->
+	<script type="text/javascript">
+		$(window).load(function() {
+			$('.flexslider').flexslider();
+		});
+	</script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+    <!--[if lt IE 9]>
+      <script src="js/vendor/html5shiv.js"></script>
+      <script src="js/vendor/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+	{% include "header.html" %}
+    <div id="content">
+	{% block content %}{% endblock %}  
+    </div>
+	{% include "footer.html" %}
+</body>
+</html>
