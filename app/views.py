@@ -6,3 +6,4 @@ from django.template import Context
 
 def index(request):
     return render_to_response('index.html')
+	

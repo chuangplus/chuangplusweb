@@ -47,10 +47,10 @@ filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endCol
 .flex-caption {width: 96%; padding: 2%; position: absolute; left: 0; bottom: 0; background: rgba(0,0,0,.3); color: #fff; text-shadow: 0 -1px 0 rgba(0,0,0,.3); font-size: 14px; line-height: 18px;}
 
 /* Direction Nav */
-.flex-direction-nav li a {width: 52px; height: 52px; margin:0; display: block;position: absolute; top: 50%; cursor: pointer; text-indent: -9999px;opacity: 0.5;}
+.flex-direction-nav li a {width: 52px; height: 52px; margin:0; display: block;position: absolute; top: 45%; cursor: pointer; text-indent: -9999px;opacity: 0.5;}
 .flex-direction-nav li a:hover{opacity: 1;}
-.flex-direction-nav li .next {background: url(../img/index-slider/nav_next.png) no-repeat 0 0;right:0}
-.flex-direction-nav li .prev { background: url(../img/index-slider/nav_pre.png) no-repeat 0 0;left:0}
+.flex-direction-nav li .next {background: url(../img/index-slider/nav_next.png) no-repeat 0 0;right:50px;}
+.flex-direction-nav li .prev { background: url(../img/index-slider/nav_pre.png) no-repeat 0 0;left:50px;}
 .flex-direction-nav li .disabled {opacity: .3; filter:alpha(opacity=30); cursor: default;}
 
 /* Control Nav */
