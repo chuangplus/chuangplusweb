@@ -67,7 +67,7 @@ class relation(models.Model):
 	rel_id = models.IntegerField()
 	user_id = models.IntegerField()
 	pro_id = models.IntegerField()
-	type = models.IntegerField(default=0) # 0:创建; 1:关注; 2:收藏; 3:爆灯
+	type = models.IntegerField(default=0) # 0:用户创建项目; 1:关注; 2:收藏; 3:爆灯
 	
 # 图片表
 class images(models.Model):
