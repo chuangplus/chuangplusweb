@@ -3,28 +3,22 @@
 {% block content %}
 
 <p>项目筛选</p>
+
 <div class="container-fluid">
     <div class="row">
 		<div class="col-xs-3">
-          <div class="select2-container form-control select select-primary" id="selector1">
-              <a href="javascript:void(0)" class="select2-choice" tabindex="-1">
-                  <span class="select2-chosen" id="selector1-chosen">X-Men</span>
-                  <abbr class="select2-search-choice-close"></abbr>
-                  <span class="select2-arrow" role="presentation">
-                      <b role="presentation"></b>
-                  </span>
-              </a>
-              <label for="selector1-text" class="select2-offscreen"></label>
-              <input class="select2-focusser select2-offscreen" type="text" aria-haspopup="true" role="button" aria-labelledby="select2-chosen-2" id="selector1-text">
-          </div>
-          <select class="form-control select select-primary select2-offscreen" data-toggle="select" tabindex="-1" title="">
-              <option value="0">Choose hero</option>
-              <option value="1">Spider Man</option>
-              <option value="2">Wolverine</option>
-              <option value="3">Captain America</option>
-              <option value="4">X-Men</option>
-              <option value="5">Crocodile</option>
-          </select>
+           <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
+                    Dropdown
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                </ul>
+           </div>
         </div>
 	</div>
 </div>
