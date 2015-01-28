@@ -2,25 +2,62 @@
 
 {% block content %}
 
-<p>项目筛选</p>
-
-<div class="container-fluid">
+<div id="container">
+    <p id="u262" class="ax_h1" align="center">项目筛选</p>
+    <div id="u222" class="ax_菜单 container-fluid" align="center">
     <div class="row">
-		<div class="col-xs-3">
+        <div class="col-xs-3">
            <div class="dropdown">
-                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true">
-                    Dropdown
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="false" aria-haspopup="true">
+                    领域
                     <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">全部</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">游戏</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">社交</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">电子商务</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">媒体</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">教育</a></li>
+                </ul>
+           </div>
+        </div>
+        <div class="col-xs-3">
+           <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-expanded="true">
+                    地区
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu2">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">全部</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">北京</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">其他</a></li>
+                </ul>
+           </div>
+        </div>
+        <div class="col-xs-3">
+           <div class="dropdown">
+                <button id="dropdownMenu3" class="btn btn-default" type="button" data-toggle="dropdown" aria-expanded="true">
+                    类型
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu3">
+                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">实体产品</a></li>
+                </ul>
+           </div>
+        </div>
+        <div class="col-xs-3">
+           <div class="dropdown">
+                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu4" data-toggle="dropdown" aria-expanded="true">
+                    融资情况
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu4">
                 </ul>
            </div>
         </div>
 	</div>
+</div>
 </div>
 
 {% endblock %}
