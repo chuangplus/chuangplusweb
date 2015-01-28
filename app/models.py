@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.db import models
 
 # Create your models here.
@@ -16,7 +17,7 @@ class userinfo(models.Model):
 	field3 = models.CharField(max_length=30)
 	company = models.CharField(max_length=30)
 	title = models.CharField(max_length=30)
-	introduction = models.TextField(blank=true)
+	introduction = models.TextField(blank=True)
 
 # 项目表
 class projects(models.Model):
@@ -27,7 +28,7 @@ class projects(models.Model):
 	field3 = models.CharField(max_length=30)
 	type = models.CharField(max_length=30)
 	slogan = models.CharField(max_length=120)
-	summary = models.TextField(blank=true)
+	summary = models.TextField(blank=True)
 	province = models.CharField(max_length=30)
 	stage = models.CharField(max_length=30)
 	contact_name = models.CharField(max_length=30)
@@ -37,11 +38,12 @@ class projects(models.Model):
 	link1 = models.CharField(max_length=250)
 	link2 = models.CharField(max_length=250)
 	link3 = models.CharField(max_length=250)
-	business_model = models.TextField(blank=true)
-	plan = models.TextField(blank=true)
-	market_analysis = models.TextField(blank=true)
+	business_model = models.TextField(blank=True)
+	plan = models.TextField(blank=True)
+	market_analysis = models.TextField(blank=True)
 	check_status = models.IntegerField(default=0)
 	finance_status = models.IntegerField(default=0)
+	date = models.DateField()
 	
 # 项目成员表
 class members(models.Model):
@@ -50,7 +52,7 @@ class members(models.Model):
 	m_name = models.CharField(max_length=30)
 	m_head_path = models.CharField(max_length=250)
 	m_title = models.CharField(max_length=30)
-	introduction = models.TextField(blank=true)
+	introduction = models.TextField(blank=True)
 	
 # 文章表（包括网站公告、平台新闻、大事记）
 class posts(models.Model):
@@ -58,7 +60,7 @@ class posts(models.Model):
 	pro_id = models.IntegerField(default=0) # pro_id=-1:网站公告; pro_id=0:平台新闻; pro_id=projects.pro_id:项目大事记; 
 	date = models.DateField()
 	title = models.CharField(max_length=60)
-	content = models.TextField(blank=true)
+	content = models.TextField(blank=True)
 	link = models.CharField(max_length=250)
 	image_path = models.CharField(max_length=250)
 	
@@ -67,6 +69,7 @@ class relation(models.Model):
 	rel_id = models.IntegerField()
 	user_id = models.IntegerField()
 	pro_id = models.IntegerField()
+	date = models.DateField()
 	type = models.IntegerField(default=0) # 0:用户创建项目; 1:关注; 2:收藏; 3:爆灯
 	
 # 图片表
@@ -77,3 +80,4 @@ class images(models.Model):
 	title = models.CharField(max_length=60)
 	text = models.CharField(max_length=60)
 	link = models.CharField(max_length=250)
+	date = models.DateField()
