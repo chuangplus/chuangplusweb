@@ -12,7 +12,7 @@ body
 	padding-left: 80px;
 	padding-right: 80px;
 }
-#introduction
+.introduction
 {
 	width: auto;
 	height: 92px;
@@ -23,49 +23,59 @@ body
 	width: 5px;
 	height: 92px;
 	background-color: white;
-	opacity: 0.8;
 	margin-right: 25px;
 	float: left;
 }
 #icons
 {
-	width: 35px;
+	width: auto;
 	height: 15px;
 	margin-top: 25px;
 	margin-bottom: 15px;
 	margin-left: 25px;
-	background-color: red;
+}
+#icons img
+{
+  margin-right: 5px;
+  float: left;
+}
+.title-text
+{
+  	margin-top: 0px;
+    margin-bottom: 14px;
+}
+.content-text
+{
+  	margin-top: 15px;
+  	width: 560px;
 }
 .t1
 {
-	margin-top: 0px;
 	font-family: 微软雅黑;
+    line-height: 24px;
 	font-size: 24px;
 	color: white;
-	margin-bottom: 10px;
 }
 .t3
 {
-	margin-top: 10px;
 	font-family: 微软雅黑;
 	font-size: 16px;
+    line-height: 18.5px;
 	color: white;
-	width: 560px;
 }
 #horizontal-line
 {
-	width: 25px;
+	width: 560px;
 	height: 2px;
-	border-right: 535px solid white;
+    border-right: 530px solid white;
 }
 #options
 {
-	width: 1200px;
-	height: 46px;
+	width: auto;
+	height: 70px;
 	background-color: rgba(255,255,255,0.3);
 	padding-top: 12px;
 	padding-bottom: 12px;
-    margin: auto;
 }
 #opt0
 {
@@ -92,29 +102,39 @@ body
 {
 	width: auto;
 	text-align: center;
-	margin-top: 12px;
-	margin-bottom: 12px;
+	margin-top: 14px;
+	margin-bottom: 14px;
 	float: left;
 }
 .opt-pos0
 {
-	width: 76px;
+	width: 53px;
 	height:46px;
 	float: left;
 }
 .opt-pos
 {
-	width: 70px;
+	width: 60px;
 	height:46px;
 	float: left;
 }
 .opt-img
 {
-	width: 22px;
-	height: 22px;
+	width: 16px;
+	height: 10px;
 	float: left;
-	margin-top: 12px;
-	margin-bottom: 12px;
+	margin-top: 20px;
+	margin-bottom: 15px;
+    margin-left: 2px;
+}
+.reset-img
+{
+	width: 16px;
+	height: 16px;
+	float: left;
+	margin-top: 15px;
+	margin-bottom: 15px;
+    margin-left: 0px;
 }
 .w1{
   position:relative;
@@ -129,9 +149,9 @@ body
   top:-10px;
   left: -10px;
   width:59px;
-  height:30px;
+  height:35px;
   font-size: 12px;
-  padding:5px 0 0 11px;
+  padding:3px 0 0 6px;
   color: #f9f9f9;
   background-image: url(../img/base-financing/label.png);
 }
@@ -177,8 +197,9 @@ body
   position:absolute;
   top:214px;
   border-top: 2px solid #bbb;
-  padding: 10px 0 0 0;
+  padding: 8px 0 0 0;
   margin-left:20px;
+  margin-top: 8px;
 }
 .w1240{
   float:left;
@@ -196,7 +217,7 @@ body
   width:18px;
   float:left;
   background-color: #dcdcdc;
-  padding:120px 20px 120px 20px;
+  padding:135px 30px 135px 20px;
 }
 .w2{
   margin:22px auto 38px auto;
