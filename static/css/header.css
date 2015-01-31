@@ -1,0 +1,71 @@
+#chuangp-header {
+	font-family: "微软雅黑";
+}
+.navbar, .navbar-header {
+	min-height: 110px;
+}
+.navbar-inverse {
+	background-color: #ffffff;
+}
+#headercontainer {
+	width: 100%;
+	padding-left: 110px;
+	background-image: url(../img/header/topbg.png);
+	background-repeat-y: no-repeat;
+	background-position: top;
+}
+.navbar-logo {
+	height: 110px;
+	width: 90px;
+	padding-top: 35px;
+	padding-bottom: 25px;
+	float: left;
+}
+.navbar-inverse .navbar-nav>li>a, 
+.navbar-inverse .navbar-brand>a {
+	color: #606060;
+}
+.navbar-inverse .navbar-nav>li>a:hover, 
+.navbar-inverse .navbar-nav>li>a:focus, 
+.navbar-inverse .navbar-nav>.active>a, 
+.navbar-inverse .navbar-nav>.active>a:hover, 
+.navbar-inverse .navbar-nav>.active>a:focus {
+	color: rgba(96,96,96,0.7);
+	background-color: #ffffff;
+	background-image: url(../img/header/top.png);
+	background-size: 100px 10px;
+	background-repeat: no-repeat;
+	background-position: top;
+}
+.navbar-brand {
+	height: 110px;
+	width: 165px;
+	line-height: 0.5;
+	padding-top: 45px;
+}
+.navbar-nav>li {
+	height: 110px;
+	width: 100px;
+}
+.navbar-nav>li>a {
+	padding-top: 48.5px;
+	padding-right: 0;
+	padding-bottom: 38.5px;
+	padding-left: 0;
+	text-align: center;
+}
+.navbar-form {
+	padding-top: 45px;
+	padding-right: 19px;
+	padding-bottom: 35px;
+	padding-left: 19px;
+	margin-top: 0;
+	margin-bottom: 0;
+}
+.navbar-inverse .navbar-form .form-control {
+	height: 30px;
+	width: 200px;
+	background-color: rgba(96,96,96,0.1);
+	border-color: rgba(96,96,96,0.3);
+	border-radius: 0;
+}
