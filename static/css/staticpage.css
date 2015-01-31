@@ -1,0 +1,40 @@
+.chuangp-staticpage {
+	font-family: "微软雅黑";
+	color: #777777;
+	line-height: 1;
+}
+#purple {
+	height:240px;
+	width: 100%;
+	background: #8e5a96;
+}
+#label {
+	margin-top: 20px;
+}
+#label a {
+	margin-right: 10px;
+	font-size: 16px;
+}
+#heading1 {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	font-size: 30px;
+	text-align: center;
+}
+#heading2 {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-size: 20px;
+	text-align: left;
+}
+#content {
+	margin-top: 1px;
+	margin-bottom: 1px;
+	font-size: 16px;
+	text-align: left;
+}
+#endoftext {
+	height: 2px;
+	width: 100%;
+	background: #777777;
+}
