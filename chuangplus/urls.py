@@ -12,6 +12,11 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
     # financing
     url(r'^financing/$', financing),
+    # policy
+    url(r'^policy/$', policy),
+    # community
+    url(r'^community/$', community),
+	
 	# index
     url(r'^$', 'app.views.index'),
 	

@@ -10,4 +10,11 @@ def index(request):
 
 def financing(request):
     return render_to_response('base_financing.html')
+	
+def policy(request):
+    return render_to_response('policy.html')
+	
+def community(request):
+    return render_to_response('community.html')
+	
 
