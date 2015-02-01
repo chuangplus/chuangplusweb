@@ -17,4 +17,11 @@ def policy(request):
 def community(request):
     return render_to_response('community.html')
 	
+def about(request):
+    return render_to_response('about.html')
 
+def contract(request):
+    return render_to_response('contract.html')
+
+def feedback(request):
+    return render_to_response('feedback.html')

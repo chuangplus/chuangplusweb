@@ -16,6 +16,12 @@ urlpatterns = patterns('',
     url(r'^policy/$', policy),
     # community
     url(r'^community/$', community),
+    # about
+    url(r'^about/$', about),
+    # contract
+    url(r'^contract/$', contract),
+    # feedback
+    url(r'^feedback/$', feedback),
 	
 	# index
     url(r'^$', 'app.views.index'),
