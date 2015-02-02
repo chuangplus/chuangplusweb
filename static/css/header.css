@@ -7,14 +7,26 @@
 .navbar-inverse {
 	background-color: #ffffff;
 }
-#headercontainer {
+#headernavbar {
+	position: relative;
 	width: 100%;
-	padding-left: 110px;
+	height: 110px;
+}
+#headercontainer {
+	position: absolute;
+	width: 100%;
+	height: 110px;
+	top: 50%;
+	left: 50%;
+	margin-top: -55px;
+	margin-left: -50%;
+	padding-right: 80px;
+	padding-left: 80px;
 	background-image: url(../img/header/topbg.png);
 	background-repeat-y: no-repeat;
 	background-position: top;
 }
-.navbar-logo {
+#header-navbar-logo {
 	height: 110px;
 	width: 90px;
 	padding-top: 35px;
@@ -37,22 +49,22 @@
 	background-repeat: no-repeat;
 	background-position: top;
 }
-.navbar-brand {
-	height: 110px;
-	width: 165px;
-	line-height: 0.5;
-	padding-top: 45px;
-}
-.navbar-nav>li {
+.navbar-inverse .navbar-nav>li {
 	height: 110px;
 	width: 100px;
 }
-.navbar-nav>li>a {
+.navbar-inverse .navbar-nav>li>a {
 	padding-top: 48.5px;
 	padding-right: 0;
 	padding-bottom: 38.5px;
 	padding-left: 0;
 	text-align: center;
+}
+#header-navbar-brand {
+	height: 110px;
+	width: 165px;
+	line-height: 0.5;
+	padding-top: 45px;
 }
 .navbar-form {
 	padding-top: 45px;

@@ -11,17 +11,17 @@
 #footer-brand {
 	padding-left: 250px;
 }
-.navbar-logo {
+#footer-navbar-logo {
 	height: 136px;
 	width: 90px;
 	padding-top: 43px;
 	padding-bottom: 43px;
 	float: left;
 }
-#footer-nav>li>a, .navbar-brand>a {
+#footer-nav>li>a, #footer-navbar-brand>a {
 	color: #ffffff;
 }
-.navbar-brand {
+#footer-navbar-brand {
 	height: 136px;
 	width: 275px;
 	font-size: 12px;
