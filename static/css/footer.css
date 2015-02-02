@@ -43,8 +43,11 @@
 	height: 215px;
 	background-color: #ffffff;
 }
-#contactshare-nav>li>a, #contanctinfo>li>a {
+#contactshare-nav>li>a {
 	color: #777777;
+}
+#contanctinfo>li>a {
+	color: #8e8e8e;
 }
 #contactshare-nav>li {
 	height: 152px;
