@@ -1,0 +1,48 @@
+﻿.width-limited {
+	width:1200px;
+	margin:auto;
+}
+
+.tab-bar {
+	background-color:#444;
+	border-bottom:solid 4px #58b;
+}
+.tab-bar .width-limited {
+	height:60px;
+}
+
+.tab {
+	font-family:'黑体','Arial';
+	font-size:18px;
+	height:60px;
+	width:600px;
+	float:left;
+	color:#fff;
+	padding-top:18px;
+	text-align:center;
+}
+
+.tab-active {
+	background-color:#58b;
+}
+
+.banner{
+	height:400px;
+}
+
+.cyz-icon {
+	float:left;
+	margin:20px 175px 20px 175px;
+}
+
+.cyz-icon h3{
+	text-align:center;
+	font-size:24px;
+}
+
+.dashiji {
+	background:url(../img/index/dashiji-bg.jpg) center center no-repeat;
+	min-height:800px;
+	width:auto;
+	margin:auto;
+}
