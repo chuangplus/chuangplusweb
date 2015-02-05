@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*- 
-from models import *
-from django.shortcuts import render, render_to_response
-from django.contrib import auth
+from django.shortcuts import render_to_response
 from django.contrib.auth import authenticate,login,logout
 from django.http import HttpResponse
 from django.template import RequestContext
-import sys
 
 
 def user_login(request):
