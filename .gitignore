@@ -1,3 +1,8 @@
 *.pyc
+<<<<<<< HEAD
 /chuangplus/settings.py
+=======
 chuangplus/settings.py
+.idea/
+*.sqlite3
+>>>>>>> origin/master
