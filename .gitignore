@@ -1,2 +1,3 @@
 *.pyc
 /chuangplus/settings.py
+chuangplus/settings.py

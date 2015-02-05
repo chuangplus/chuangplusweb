@@ -15,6 +15,9 @@ urlpatterns = patterns('',
     url(r'^login/$', 'app.user.user_login'),
     # logout
     url(r'^logout/$', 'app.user.user_logout'),
+    # register
+    url(r'^register/$', 'app.user.cyz_register'),
+	
 
     # financing
     url(r'^financing/$', financing),

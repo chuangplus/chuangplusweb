@@ -1,12 +1,4 @@
-﻿h1 {
-	font-weight:normal;
-	padding-top:50px;
-	padding-bottom:50px;
-	color:#777;
-	font-size:36px;
-	text-align:center;
-}
-
+﻿
 .width-limited {
 	width:1200px;
 	margin:auto;
@@ -56,6 +48,12 @@
 .hzdw img {
 	margin:auto;
 	position:relative;
+}
+.hzdw h1 {
+	padding-top:50px;
+	padding-bottom:50px;
+	font-size:36px;
+	text-align:center;
 }
 
 .cyz-icon {
