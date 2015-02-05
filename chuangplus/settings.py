@@ -40,8 +40,15 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites',
 	'app',
+    'account',
+    'pinax_theme_bootstrap',
+    'bootstrapform',
 )
+
+SITE_ID = 1
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -51,6 +58,14 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "account.middleware.LocaleMiddleware",
+    "account.middleware.TimezoneMiddleware",
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'pinax_theme_bootstrap.context_processors.theme',
+    "account.context_processors.account",
 )
 
 ROOT_URLCONF = 'chuangplus.urls'
@@ -72,12 +87,12 @@ DATABASES = {
     }
 }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'chuangplusweb.sqlite3'),
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'chuangplusweb.sqlite3'),
+#     }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
@@ -100,7 +115,10 @@ STATIC_URL = '/static/'
 
 # Import static files like css/js/img 
 STATIC_ROOT = ''
-STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    os.path.join(os.path.dirname(__file__), '../static/').replace('\\','/'),
+    os.path.join(BASE_DIR, "static"),
 )
+
+# account
+
+ACCOUNT_EMAIL_CONFIRMATION_EMAIL = False

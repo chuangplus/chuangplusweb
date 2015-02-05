@@ -1,40 +1,39 @@
 from django.shortcuts import render_to_response
-
+from django.template import RequestContext
 from app.models import *
-
 
 # Create your views here.
 
+
 def index(request):
-	user = request.user;
-	imgs = image.objects.filter(pro_id = -1)
-	return render_to_response('index.html',{'imgs':imgs, 'user':user})
+    imgs = image.objects.filter(pro_id = -1)
+    return render_to_response('index.html', {'imgs':imgs, 'request': request}, context_instance=RequestContext(request))
+
 
 def index_inv(request):
-	user = request.user;
-	imgs = image.objects.filter(pro_id = -1)
-	return render_to_response('index_inv.html',{'imgs':imgs, 'user':user})
+    imgs = image.objects.filter(pro_id = -1)
+    return render_to_response('index_inv.html', {'imgs':imgs, 'request': request}, context_instance=RequestContext(request))
+
 
 def financing(request):
-    user = request.user;
-    return render_to_response('base_financing.html', {'user':user})
-	
+    return render_to_response('base_financing.html', {'request': request}, context_instance=RequestContext(request))
+
+
 def policy(request):
-    user = request.user;
-    return render_to_response('policy.html', {'user':user})
-	
+    return render_to_response('policy.html', {'request': request}, context_instance=RequestContext(request))
+
+
 def community(request):
-    user = request.user;
-    return render_to_response('community.html', {'user':user})
-	
+    return render_to_response('community.html', {'request': request}, context_instance=RequestContext(request))
+
+
 def about(request):
-    user = request.user;
-    return render_to_response('about.html', {'user':user})
+    return render_to_response('about.html', {'request': request}, context_instance=RequestContext(request))
+
 
 def contract(request):
-    user = request.user;
-    return render_to_response('contract.html', {'user':user})
+    return render_to_response('contract.html', {'request': request}, context_instance=RequestContext(request))
+
 
 def feedback(request):
-    user = request.user;
-    return render_to_response('feedback.html', {'user':user})
+    return render_to_response('feedback.html', {'request': request}, context_instance=RequestContext(request))

@@ -28,10 +28,12 @@ urlpatterns = patterns('',
     url(r'^contract/$', contract),
     # feedback
     url(r'^feedback/$', feedback),
-	
+
+	url(r"^account/", include("account.urls")),
+
 	# index-investor
     url(r'^inv/$', 'app.views.index_inv'),
 	# index
-    url(r'^$', 'app.views.index'),
+    url(r'^$', 'app.views.index', name='home'),
 	
 )
