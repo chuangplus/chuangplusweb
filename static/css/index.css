@@ -1,4 +1,13 @@
-﻿.width-limited {
+﻿h1 {
+	font-weight:normal;
+	padding-top:50px;
+	padding-bottom:50px;
+	color:#777;
+	font-size:36px;
+	text-align:center;
+}
+
+.width-limited {
 	width:1200px;
 	margin:auto;
 }
@@ -26,8 +35,27 @@
 	background-color:#58b;
 }
 
+.xiaojiao {
+	position:absolute;
+	margin-left:-910px;
+	margin-top:55px;
+}
+.xiaojiao-inv {
+	position:absolute;
+	margin-left:-310px;
+	margin-top:55px;
+}
+
 .banner{
 	height:400px;
+}
+.hzdw{
+	height:400px;
+	background-color:#EEE;
+}
+.hzdw img {
+	margin:auto;
+	position:relative;
 }
 
 .cyz-icon {
@@ -45,4 +73,22 @@
 	min-height:800px;
 	width:auto;
 	margin:auto;
+}
+.dashiji h1 {
+	color:#FFF;
+}
+
+/* index_inv */
+.w11-inv {
+	height:360px;
+	width:640px;
+	float:left;
+	background-color: #dcdcdc;
+}
+.w12-inv{
+  height:360px;
+  width:540px;
+  float:left;
+  color:#848286;
+  background-color: #f2f2f2;
 }

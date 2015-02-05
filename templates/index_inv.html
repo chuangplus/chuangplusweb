@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<link href="../static/css/index.css" rel="stylesheet">
+<link href="../static/css/base_financing.css" rel="stylesheet">
+<!-- Content of index -->
+
+<div id="container">	
+	<!--=============================
+	Markup for FADE animation
+	=================================-->
+	<div class="flexslider">
+	<ul class="slides">
+	{% for img in imgs %}
+		<li>
+			<a href={{ img.link }}>
+			<img src='../{{ img.image_path }}' />
+			</a>
+		</li>
+	{% endfor %}
+	</ul>
+	</div>
+	
+  <!-- Chuangyezhe-page -->
+  <div class="tab-bar">
+	<div class="width-limited">
+	<a href="/"><div class="tab">我是创业者</div></a>
+	<a href="/invest"><div class="tab tab-active">我是投资人</div>
+	<img class="xiaojiao-inv" src="../static/img/index/jiao.png"></a>
+	</div>
+  </div>
+  
+  <div class="banner">
+  <div class="width-limited">
+	<div class="cyz-icon"><a href="#">
+	  <img src="../static/img/index/button-zhengzai.png">
+	  <h3>正在融资项目</h3>
+	</a></div>
+	<div class="cyz-icon"><a href="#">
+	  <img src="../static/img/index/button-ganxingqu.png">
+	  <h3>感兴趣的项目</h3>
+	</a></div>
+  </div>
+  </div>
+  
+  <div class="dashiji">
+	<h1>当期路演</h1>
+  	<div class="w1">
+    	<div class="w11-inv">
+    	</div>
+    	<div class="w12-inv">
+      		<div class="w121">
+      			我是一个项目
+      		</div>
+	      	<div class="w122">
+	        	<div class="w1220">
+	          		<div class="w12201">
+	          			<img src="../static/img/base-financing/chuangshiren.png">
+	          		</div>
+	          		<div class="w12202">
+	          			Adrian CEO
+	          		</div>
+	        	</div>
+	        	<div class="w1220">
+	          		<div class="w12201">
+	          			<img src="../static/img/base-financing/rongziqingkuang.png">
+	          		</div>
+	          		<div class="w12202">
+	          			天使轮
+	          		</div>
+	        	</div>
+	        	<div class="clearfix">
+	        	</div>
+	      	</div>
+	      	<div class="w123">
+	      		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoret. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fer-meneitum, nulla luctus phearetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+	      	</div>
+	      	<div class="w124">
+	        	<div class="w1240">
+	        		游戏
+	        	</div>
+	        	<div class="w1240">
+	        		社交
+	        	</div>
+	        	<div class="w1240" style="margin:0">
+	        		虚拟现实
+	        	</div>
+	        	<div class="clearfix">
+	        	</div>
+      		</div>
+    	</div>
+	    <div class="clearfix">
+	    </div>
+  	</div>
+  </div>
+  <div class="banner" style="background:url(../static/img/index/xianshang.jpg) center center no-repeat;">
+  </div>
+  <div class="banner" style="background:url(../static/img/index/xianxia.jpg) center center no-repeat;">
+  </div>
+  <div class="banner" style="background:url(../static/img/index/qingxin.jpg) center center no-repeat;">
+  </div>
+  <div class="hzdw" >
+  <div class="width-limited">
+	<h1>合作单位</h1>
+	<img src="../static/img/index/hezuo.png" >
+  </div>
+  </div>
+</div>
+
+<!-- End of index -->
+
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="login-box">
+  <form class="login-form" action="/login/" method="POST">
+  {% csrf_token %}
+	<div class="form-group">
+	  <input name="username" type="text" class="form-control login-field" value="" placeholder="Enter your name" id="login-name" />
+	  <label class="login-field-icon fui-user" for="login-name"></label>
+	</div>
+
+	<div class="form-group">
+	  <input name="password" type="password" class="form-control login-field" value="" placeholder="Password" id="login-pass" />
+	  <label class="login-field-icon fui-lock" for="login-pass"></label>
+	</div>
+
+	<input type="submit" class="btn btn-primary btn-lg btn-block" >Log in</a>
+	<a class="login-link" href="#">Lost your password?</a>
+  </form>
+</div>
+
+{% endblock %}

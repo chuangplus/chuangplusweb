@@ -11,17 +11,13 @@
 	=================================-->
 	<div class="flexslider">
 	<ul class="slides">
+	{% for img in imgs %}
 		<li>
-			<img src="static/img/index/banner1.jpg" />
-		</li>
-		<li>
-			<a href="#">
-			<img src="static/img/index/banner2.jpg" />
+			<a href={{ img.link }}>
+			<img src={{ img.image_path }} />
 			</a>
 		</li>
-		<li>
-			<img src="static/img/index/banner3.jpg" />
-		</li>
+	{% endfor %}
 	</ul>
 	</div>
 	
@@ -29,7 +25,8 @@
   <div class="tab-bar">
 	<div class="width-limited">
 	<a href="/"><div class="tab tab-active">我是创业者</div></a>
-	<a href="/invest"><div class="tab">我是投资人</div></a>
+	<a href="/inv"><div class="tab">我是投资人</div>
+	<img class="xiaojiao" src="static/img/index/jiao.png"></a>
 	</div>
   </div>
   
@@ -47,16 +44,18 @@
   </div>
   
   <div class="dashiji">
-   
   </div>
-  
-  <div class="banner" style="background:url(../img/index/dashiji-bg.jpg) center center no-repeat;">
+  <div class="banner" style="background:url(../static/img/index/rongziliucheng.png) center center no-repeat;">
   </div>
-  
-  <div class="banner" style="background:url(../img/index/dashiji-bg.jpg) center center no-repeat;">
+  <div class="banner" style="background:url(../static/img/index/chuangjiacafe.png) center center no-repeat;">
   </div>
-  
-  <div class="banner" style="background:url(../img/index/dashiji-bg.jpg) center center no-repeat;">
+  <div class="banner" style="background:url(../static/img/index/difangzhengfu.png) center center no-repeat;">
+  </div>
+  <div class="hzdw" >
+  <div class="width-limited">
+	<h1>合作单位</h1>
+	<img src="../static/img/index/hezuo.png" >
+  </div>
   </div>
 </div>
 
