@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="tab-bar">
+	<div class="width-limited">
+	<a href="/register"><div class="tab tab-active">我是创业者</div></a>
+	<a href="/register_inv"><div class="tab">我是投资人</div>
+	<img class="xiaojiao" src="../static/img/index/jiao.png"></a>
+	</div>
+</div>
+  
+<div class="login-box">
+<h1>注册</h1>
+  <form class="login-form" action="/register/" method="POST">
+  {% csrf_token %}
+	<div class="form-group">
+	  <label class="login-field-icon fui-user" for="login-name"></label>
+	  <input name="username" type="text" class="form-control login-field" value="" placeholder="用户名" id="login-name" />
+	</div>
+
+	<div class="form-group">
+	  <input name="password" type="password" class="form-control login-field" value="" placeholder="密码" id="login-pass" />
+	  <label class="login-field-icon fui-lock" for="login-pass"></label>
+	</div>
+
+	<input type="submit" class="btn btn-primary btn-lg btn-block" >
+	已有账号？<a class="login-link" href="#">直接登录</a>
+  </form>
+</div>
+
+{% endblock %}
