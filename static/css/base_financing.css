@@ -1,3 +1,16 @@
+.t1
+{
+	margin-top: 0px;
+	font-family: 微软雅黑;
+	font-size: 24px;
+	color: white;
+}
+.t3
+{
+	font-family: 微软雅黑;
+	font-size: 16px;
+	color: white;
+}
 body
 {
 	margin: 0px;
@@ -29,39 +42,40 @@ body
 }
 #icons
 {
-	width: 35px;
-	height: 15px;
+	width: auto;
+	height: 16px;
 	margin-top: 25px;
 	margin-bottom: 15px;
-	margin-left: 25px;
-	background-color: red;
+	margin-left: 28px;
+    margin-right: 5px;
 }
-.t1
+.banner
 {
-	margin-top: 0px;
-	font-family: 微软雅黑;
-	font-size: 24px;
-	color: white;
-	margin-bottom: 10px;
+  margin-right: 5px;
+  width: 16px;
+  height: 16px;
 }
-.t3
+.title1
 {
-	margin-top: 10px;
-	font-family: 微软雅黑;
-	font-size: 16px;
-	color: white;
-	width: 560px;
+  line-height: 24px;
+  margin-bottom: 14px;
 }
 #horizontal-line
 {
-	width: 25px;
+	width: 560px;
 	height: 2px;
-	border-right: 535px solid white;
+	border-right: 530px solid white;
+}
+.title2
+{
+  line-height: 21px;
+  margin-top: 10px;
+  width: 560px;
 }
 #options
 {
 	width: 1200px;
-	height: 46px;
+	height: 70px;
 	background-color: rgba(255,255,255,0.3);
 	padding-top: 12px;
 	padding-bottom: 12px;
@@ -98,22 +112,22 @@ body
 }
 .opt-pos0
 {
-	width: 76px;
-	height:46px;
+	width: 58px;
+	height: 46px;
 	float: left;
 }
 .opt-pos
 {
-	width: 70px;
+	width: 62px;
 	height:46px;
 	float: left;
 }
 .opt-img
 {
-	width: 22px;
-	height: 22px;
+	width: 16px;
+	height: 16px;
 	float: left;
-	margin-top: 12px;
+	margin-top: 15px;
 	margin-bottom: 12px;
 }
 .w1{
@@ -128,8 +142,8 @@ body
   position: absolute;
   top:-10px;
   left: -10px;
-  width:59px;
-  height:30px;
+  width:70px;
+  height:35px;
   font-size: 12px;
   padding:5px 0 0 11px;
   color: #f9f9f9;
@@ -196,7 +210,7 @@ body
   width:18px;
   float:left;
   background-color: #dcdcdc;
-  padding:120px 20px 120px 20px;
+  padding:135px 29px 135px 20px;
 }
 .w2{
   margin:22px auto 38px auto;

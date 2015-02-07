@@ -64,9 +64,9 @@ WSGI_APPLICATION = 'chuangplus.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE' : 'django.db.backends.mysql' ,
-        'NAME' : 'djangodb' ,
+        'NAME' : 'chuangplus' ,
         'USER' : 'root' ,
-        'PASSWORD' : 'THUcj2014' ,
+        'PASSWORD' : '19950311cly' ,
         'HOST' : '127.0.0.1' ,
         'PORT' : '3306' ,
     }
