@@ -1,0 +1,94 @@
+.chuangp-staticpage {
+	font-family: "微软雅黑";
+	color: #777777;
+	line-height: 1;
+}
+#purple {
+	height:240px;
+	width: 100%;
+	background: #8e5a96;
+}
+#label {
+	margin-top: 20px;
+}
+#label a {
+	margin-right: 10px;
+	font-size: 16px;
+}
+.heading1 {
+	margin-top: 40px;
+	margin-bottom: 40px;
+	font-size: 30px;
+	text-align: center;
+}
+.heading2 {
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-size: 20px;
+	text-align: left;
+}
+.heading3 {
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-size: 18px;
+	text-align: left;
+}
+.heading4 {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	font-size: 18px;
+	text-align: left;
+}
+.content {
+	margin-top: 1px;
+	margin-bottom: 1px;
+	font-size: 16px;
+	text-align: left;
+}
+#endoftext {
+	height: 2px;
+	width: 100%;
+	background: #777777;
+}
+
+#itemtable {
+	padding-top: 30px;
+	width: 200px;
+	float: left;
+}
+.itemcontent {
+	padding-left: 250px;
+}
+.hide {
+	visibility: hidden;
+}
+
+#agree {
+	position: relative;
+	width: 100%;
+	height: 80px;
+}
+#agreebtn {
+	position: absolute;
+	width: 260px;
+	height: 80px;
+	top: 50%;
+	left: 50%;
+	margin-top: -40px;
+	margin-left: -130px;
+}
+
+#submit {
+	position: relative;
+	width: 100%;
+	height: 50px;
+}
+#submitbtn {
+	position: absolute;
+	width: 80px;
+	height: 50px;
+	top: 50%;
+	left: 50%;
+	margin-top: -25px;
+	margin-left: -40px;
+}

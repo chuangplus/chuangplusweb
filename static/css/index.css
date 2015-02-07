@@ -1,0 +1,92 @@
+﻿
+.width-limited {
+	width:1200px;
+	margin:auto;
+}
+
+.tab-bar {
+	background-color:#444;
+	border-bottom:solid 4px #58b;
+}
+.tab-bar .width-limited {
+	height:60px;
+}
+
+.tab {
+	font-family:'黑体','Arial';
+	font-size:18px;
+	height:60px;
+	width:600px;
+	float:left;
+	color:#fff;
+	padding-top:18px;
+	text-align:center;
+}
+
+.tab-active {
+	background-color:#58b;
+}
+
+.xiaojiao {
+	position:absolute;
+	margin-left:-910px;
+	margin-top:55px;
+}
+.xiaojiao-inv {
+	position:absolute;
+	margin-left:-310px;
+	margin-top:55px;
+}
+
+.banner{
+	height:400px;
+}
+.hzdw{
+	height:400px;
+	background-color:#EEE;
+}
+.hzdw img {
+	margin:auto;
+	position:relative;
+}
+.hzdw h1 {
+	padding-top:50px;
+	padding-bottom:50px;
+	font-size:36px;
+	text-align:center;
+}
+
+.cyz-icon {
+	float:left;
+	margin:20px 175px 20px 175px;
+}
+
+.cyz-icon h3{
+	text-align:center;
+	font-size:24px;
+}
+
+.dashiji {
+	background:url(../img/index/dashiji-bg.jpg) center center no-repeat;
+	min-height:800px;
+	width:auto;
+	margin:auto;
+}
+.dashiji h1 {
+	color:#FFF;
+}
+
+/* index_inv */
+.w11-inv {
+	height:360px;
+	width:640px;
+	float:left;
+	background-color: #dcdcdc;
+}
+.w12-inv{
+  height:360px;
+  width:540px;
+  float:left;
+  color:#848286;
+  background-color: #f2f2f2;
+}

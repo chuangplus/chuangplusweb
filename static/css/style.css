@@ -1,0 +1,6 @@
+body,button, input, select, textarea,h1 ,h2, h3, h4, h5, h6 ,a { 
+	font-weight:normal;
+	font-family: Microsoft YaHei,'黑体' , Tahoma, Helvetica, Arial, sans-serif;
+	color:#666;
+	transition:0;
+}

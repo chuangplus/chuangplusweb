@@ -1,2 +1,4 @@
 *.pyc
-/chuangplus/settings.py
+chuangplus/settings.py
+.idea/
+*.sqlite3
