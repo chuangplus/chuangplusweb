@@ -42,6 +42,8 @@ class project(models.Model):
 	check_status = models.IntegerField(default=0)
 	finance_status = models.IntegerField(default=0)
 	date = models.DateField()
+	def __unicode__(self):
+		return self.name
 	
 # 项目成员表
 class member(models.Model):

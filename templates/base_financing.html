@@ -6,7 +6,7 @@
 	<link href="../static/css/base_financing.css" rel="stylesheet">
 <!-- end -->
 
-<!---->
+<!-- 图片轮播部分 -->
     <div id="content-financing">
     	<div id="introduction">
     		<div id="vertical-line"></div>
@@ -59,9 +59,10 @@
     		</div>
     	</div>
     </div>
-<!---->
-<!---->
-  	<div class="w1">
+
+<!-- 项目展示部分 -->
+	{% for p in projects_past %}
+  		<div class="w1">
     	<div class="w10">
     		当前路演
     	</div>
@@ -69,7 +70,7 @@
     	</div>
     	<div class="w12">
       		<div class="w121">
-      			我是一个项目
+      			{{ p.name }}
       		</div>
 	      	<div class="w122">
 	        	<div class="w1220">
@@ -114,8 +115,44 @@
 	    <div class="clearfix">
 	    </div>
   	</div>
-  	<div class="blank">
-  	</div>
+		<div class="blank">
+		</div>
+	{% endfor %}
+
+<!-- 分页控件部分 -->
+  <div class="w2">
+	  <div class="w21">
+		  <img src="../static/img/base-financing/pagesleft.png">
+	  </div>
+	  <div class="w22">
+		  <div class="w220">
+			  1
+		  </div>
+		  <div class="w220">
+			  …
+		  </div>
+		  <div class="w220">
+			  24
+		  </div>
+		  <div class="w220 purplebdbt">
+			  25
+		  </div>
+		  <div class="w220">
+			  26
+		  </div>
+		  <div class="w220">
+			  …
+		  </div>
+		  <div class="w220">
+			  79
+		  </div>
+	  </div>
+	  <div class="w21">
+		  <img src="../static/img/base-financing/pagesright.png">
+	  </div>
+  </div>
+  <div class="clearfix">
+  </div>
 
 <!-- js -->
 	<script src="../static/js/base_financing.js"></script>
