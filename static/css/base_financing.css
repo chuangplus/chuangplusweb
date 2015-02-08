@@ -54,6 +54,11 @@ body
   margin-right: 5px;
   width: 16px;
   height: 16px;
+  opacity: 0.5;
+}
+.banner:hover
+{
+  opacity: 1;
 }
 .title1
 {
