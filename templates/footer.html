@@ -1,3 +1,6 @@
+{% load staticfiles %}
+{% load url from future %}
+
 <div id="chuangp-footer">
     <footer id="footer1" class="footer">
       <div class="container">
@@ -15,9 +18,9 @@
               <li id="erweima"><a>扫描并关注微信公众号</a></li>
               <li>
                 <ul id="contanctinfo">
-                  <li style="padding-left: 2.5px;"><img src="../static/img/footer/call.png"><a>+86&nbsp;152-0152-0366</a></li>
-                  <li><img src="../static/img/footer/mail.png"><a>support@chuangplus.com</a></li>
-                  <li style="padding-left: 3px;"><img src="../static/img/footer/address.png"><a>北京市海淀区清华科技园科技大厦D座B103.10084</a></li>
+                  <li style="padding-left: 2.5px;"><img src="{% static "img/footer/call.png" %}"><a>+86&nbsp;152-0152-0366</a></li>
+                  <li><img src="{% static "img/footer/mail.png" %}"><a>support@chuangplus.com</a></li>
+                  <li style="padding-left: 3px;"><img src="{% static "img/footer/address.png" %}"><a>北京市海淀区清华科技园科技大厦D座B103.10084</a></li>
                 </ul>
               </li>
               <li id="weixinicon"></li>
@@ -32,7 +35,7 @@
       <div class="container">
         <div class="navbar-footer">
       <div id="footer-navbar-logo" class="navbar-logo">
-			  <img src="../static/img/footer/logo-white.png">
+			  <img src="{% static "img/footer/logo-white.png" %}">
 			</div>
         </div>
         <div class="navbar-collapse collapse">
