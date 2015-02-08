@@ -22,8 +22,8 @@ class userinfo(models.Model):
 class project(models.Model):
 	name = models.CharField(max_length=30)
 	field1 = models.CharField(max_length=30)
-	field2 = models.CharField(max_length=30)
-	field3 = models.CharField(max_length=30)
+	field2 = models.CharField(max_length=30,blank=True)
+	field3 = models.CharField(max_length=30,blank=True)
 	type = models.CharField(max_length=30)
 	slogan = models.CharField(max_length=120)
 	summary = models.TextField(blank=True)
@@ -33,15 +33,15 @@ class project(models.Model):
 	contact_phone = models.CharField(max_length=30)
 	contact_email = models.CharField(max_length=60)
 	contact_weixin = models.CharField(max_length=30)
-	link1 = models.CharField(max_length=250)
-	link2 = models.CharField(max_length=250)
-	link3 = models.CharField(max_length=250)
+	link1 = models.CharField(max_length=250,blank=True)
+	link2 = models.CharField(max_length=250,blank=True)
+	link3 = models.CharField(max_length=250,blank=True)
 	business_model = models.TextField(blank=True)
 	plan = models.TextField(blank=True)
 	market_analysis = models.TextField(blank=True)
-	check_status = models.IntegerField(default=0)
-	finance_status = models.IntegerField(default=0)
-	date = models.DateField()
+	is_checked = models.CharField(max_length=30,default="正在审核中")
+	is_roadshowing = models.CharField(max_length=30,default="未路演")
+	date = models.DateField(auto_now_add=True)
 	
 # 项目成员表
 class member(models.Model):
@@ -54,7 +54,7 @@ class member(models.Model):
 # 文章表（包括网站公告、平台新闻、大事记）
 class post(models.Model):
 	pro_id = models.IntegerField(default=0) # pro_id=-1:网站公告; pro_id=0:平台新闻; pro_id=projects.pro_id:项目大事记; 
-	date = models.DateField()
+	date = models.DateField(auto_now_add=True)
 	title = models.CharField(max_length=60)
 	content = models.TextField(blank=True)
 	link = models.CharField(max_length=250)
@@ -64,7 +64,7 @@ class post(models.Model):
 class relation(models.Model):
 	user_id = models.IntegerField()
 	pro_id = models.IntegerField()
-	date = models.DateField()
+	date = models.DateField(auto_now_add=True)
 	type = models.IntegerField(default=0) # 0:用户创建项目; 1:关注; 2:收藏; 3:爆灯
 	
 # 图片表
@@ -74,4 +74,4 @@ class image(models.Model):
 	title = models.CharField(max_length=60)
 	text = models.CharField(max_length=60)
 	link = models.CharField(max_length=250)
-	date = models.DateField()
+	date = models.DateField(auto_now_add=True)

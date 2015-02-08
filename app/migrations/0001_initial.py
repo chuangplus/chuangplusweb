@@ -11,10 +11,9 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='images',
+            name='image',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('image_id', models.IntegerField()),
                 ('pro_id', models.IntegerField()),
                 ('image_path', models.CharField(max_length=250)),
                 ('title', models.CharField(max_length=60)),
@@ -27,10 +26,9 @@ class Migration(migrations.Migration):
             bases=(models.Model,),
         ),
         migrations.CreateModel(
-            name='members',
+            name='member',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('member_id', models.IntegerField()),
                 ('pro_id', models.IntegerField()),
                 ('m_name', models.CharField(max_length=30)),
                 ('m_head_path', models.CharField(max_length=250)),
@@ -42,10 +40,9 @@ class Migration(migrations.Migration):
             bases=(models.Model,),
         ),
         migrations.CreateModel(
-            name='posts',
+            name='post',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('post_id', models.IntegerField()),
                 ('pro_id', models.IntegerField(default=0)),
                 ('date', models.DateField()),
                 ('title', models.CharField(max_length=60)),
@@ -58,10 +55,9 @@ class Migration(migrations.Migration):
             bases=(models.Model,),
         ),
         migrations.CreateModel(
-            name='projects',
+            name='project',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('pro_id', models.IntegerField()),
                 ('name', models.CharField(max_length=30)),
                 ('field1', models.CharField(max_length=30)),
                 ('field2', models.CharField(max_length=30)),
@@ -93,7 +89,6 @@ class Migration(migrations.Migration):
             name='relation',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('rel_id', models.IntegerField()),
                 ('user_id', models.IntegerField()),
                 ('pro_id', models.IntegerField()),
                 ('date', models.DateField()),
@@ -107,7 +102,6 @@ class Migration(migrations.Migration):
             name='userinfo',
             fields=[
                 ('id', models.AutoField(verbose_name='ID', serialize=False, auto_created=True, primary_key=True)),
-                ('user_id', models.IntegerField()),
                 ('role', models.IntegerField(default=1)),
                 ('name', models.CharField(max_length=30)),
                 ('gender', models.IntegerField(default=1)),
