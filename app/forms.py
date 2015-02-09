@@ -2,42 +2,69 @@
 from django import forms
 import account.forms
 from django.utils.translation import ugettext_lazy as _
-from app.models import *
+from captcha.fields import CaptchaField
+try:
+    from collections import OrderedDict
+except ImportError:
+    OrderedDict = None
 
 
 class SignupForm(account.forms.SignupForm):
 
-    def __init__(self, *args, **kwargs):
-        super(SignupForm, self).__init__(*args, **kwargs)
-        del self.fields["username"]
-        del self.fields["password"]
-        del self.fields["password_confirm"]
-        del self.fields["email"]
-        del self.fields["code"]
-        self.email = forms.EmailField(
-            label=_("Email"),
-            widget=forms.TextInput(), required=True
-        )
-        self.name = forms.CharField(
+    name = forms.CharField(
             label=_("Name"),
             max_length=30,
             widget=forms.TextInput(), required=True
         )
-        self.password = forms.CharField(
-            label=_("Password"),
-            widget=forms.PasswordInput(render_value=False)
+    captcha = CaptchaField()
+
+    def __init__(self, *args, **kwargs):
+        super(SignupForm, self).__init__(*args, **kwargs)
+        del self.fields["username"]
+        field_order = ["email", "name", "password", "password_confirm", "captcha"]
+        if not OrderedDict or hasattr(self.fields, "keyOrder"):
+            self.fields.keyOrder = field_order
+        else:
+            self.fields = OrderedDict((k, self.fields[k]) for k in field_order)
+
+
+class SignupInvForm(account.forms.SignupForm):
+
+    name = forms.CharField(
+            label=_("Name"),
+            max_length=30,
+            widget=forms.TextInput(), required=True
         )
-        self.password_confirm = forms.CharField(
-            label=_("Password (again)"),
-            widget=forms.PasswordInput(render_value=False)
+    phone = forms.CharField(
+            label=_("Phone"),
+            max_length=30,
+            widget=forms.TextInput(), required=True
         )
-        self.code = forms.CharField(
-            max_length=64,
-            required=False,
-            widget=forms.HiddenInput()
-        )
-        self.fields["email"] = self.email
-        self.fields["name"] = self.name
-        self.fields["password"] = self.password
-        self.fields["password_confirm"] = self.password_confirm
-        self.fields["code"] = self.code
+    captcha = CaptchaField()
+
+    def __init__(self, *args, **kwargs):
+        super(SignupInvForm, self).__init__(*args, **kwargs)
+        del self.fields["username"]
+        field_order = ["email", "name", "phone", "password", "password_confirm", "captcha"]
+        if not OrderedDict or hasattr(self.fields, "keyOrder"):
+            self.fields.keyOrder = field_order
+        else:
+            self.fields = OrderedDict((k, self.fields[k]) for k in field_order)
+
+
+class SignupInvPrecheckForm(forms.Form):
+
+    company = forms.CharField(
+        label=_("Company"),
+        max_length=30,
+        widget=forms.TextInput(), required=True
+    )
+    invite_code = forms.CharField(
+        label=_("Invite code"),
+        max_length=64,
+        widget=forms.TextInput(), required=True
+    )
+
+    def clean(self):
+        # TODO: check invite code
+        return self.cleaned_data

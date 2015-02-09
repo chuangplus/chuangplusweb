@@ -17,25 +17,34 @@ urlpatterns = patterns('',
     url(r'^logout/$', 'app.user.user_logout'),
 
     # financing
-    url(r'^financing/$', financing),
+    url(r'^financing/$', financing, name="financing"),
     # policy
     url(r'^policy/$', policy),
     # community
-    url(r'^community/$', community),
+    url(r'^community/$', community, name="community"),
     # about
-    url(r'^about/$', about),
+    url(r'^about/$', about, name="about"),
     # contract
-    url(r'^contract/$', contract),
+    url(r'^contract/$', contract, name="contract"),
     # feedback
-    url(r'^feedback/$', feedback),
+    url(r'^feedback/$', feedback, name="feedback"),
+    # feedback
+    url(r'^redirect_back/$', redirect_back, name="redirect_back"),
 
     # account
     url(r"^account/login/$", LoginView.as_view(), name="account_login"),
     url(r"^account/signup/$", SignupView.as_view(), name="account_signup"),
+    url(r"^account/signup/finish$", signup_finish, name="account_signup_finish"),
+    url(r"^account/signup_inv/$", SignupInvView.as_view(), name="account_signup_inv"),
+    url(r"^account/signup_inv_precheck/$", SignupInvPrecheckView.as_view(), name="account_signup_inv_precheck"),
+    url(r"^account/signup_inv/finish$", signup_inv_finish, name="account_signup_inv_finish"),
     url(r"^account/", include("account.urls")),
 
+    # captcha
+    url(r'^captcha/', include('captcha.urls')),
+
     # index-investor
-    url(r'^inv/$', 'app.views.index_inv'),
+    url(r'^inv/$', 'app.views.index_inv', name="index_inv"),
     # index
     url(r'^$', 'app.views.index', name='home'),
 

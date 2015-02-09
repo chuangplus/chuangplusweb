@@ -45,6 +45,7 @@ INSTALLED_APPS = (
     'account',
     'pinax_theme_bootstrap',
     'bootstrapform',
+    'captcha',
 )
 
 SITE_ID = 1
@@ -128,3 +129,10 @@ STATICFILES_DIRS = (
 ACCOUNT_EMAIL_UNIQUE = True
 ACCOUNT_EMAIL_CONFIRMATION_EMAIL = False
 ACCOUNT_USE_AUTH_AUTHENTICATE = True
+ACCOUNT_SIGNUP_REDIRECT_URL = "/account/signup/finish"
+
+# session
+
+SESSION_COOKIE_AGE = 60*30
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_COOKIE_NAME = "CHUANGPLUS_SESSION"
