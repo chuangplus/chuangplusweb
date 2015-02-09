@@ -18,8 +18,13 @@ def index_inv(request):
 def financing(request):
     user = request.user;
     projects_past = project.objects.all();
-    return render_to_response('base_financing.html', {'user':user, 'projects_past':projects_past})
-	
+    return render_to_response('project_financing.html', {'user':user, 'projects_past':projects_past})
+
+def library(request):
+    user = request.user;
+    projects_past = project.objects.all();
+    return render_to_response('project_library.html', {'user':user, 'projects_past':projects_past})
+
 def policy(request):
     user = request.user;
     return render_to_response('policy.html', {'user':user})

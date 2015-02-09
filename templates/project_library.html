@@ -1,0 +1,164 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<!-- css -->
+	<link href="../static/css/project_library.css" rel="stylesheet">
+    <link href="../static/css/font.css" rel="stylesheet">
+<!-- end -->
+
+<!-- 筛选部分 -->
+	<div id="w0">
+    	<p id="w00" class="t0">
+    		清华大学 优质项目
+    	</p>
+    	<div id="w01">
+    		<div class="w010">
+    			<div class="w0100"></div>
+    			<p class="t3 w0101">筛选项目</p>
+    			<div class="w0100"></div>
+    		</div>
+    		<div class="w011">
+    			<div class="w0110"></div>
+    			<p class="t3 w0101">全部</p>
+    			<div class="w0110"></div>
+    		</div>
+			<div class="w011">
+    			<div class="w0110"></div>
+    			<p class="t3 w0101">领域</p>
+				<img src="" class="w0111">
+    			<div class="w0110"></div>
+    		</div>
+            <div class="w011">
+    			<div class="w0110"></div>
+    			<p class="t3 w0101">地区</p>
+				<img src="" class="w0111">
+    			<div class="w0110"></div>
+    		</div>
+            <div class="w011">
+    			<div class="w0110"></div>
+    			<p class="t3 w0101">类型</p>
+				<img src="" class="w0111">
+    			<div class="w0110"></div>
+    		</div>
+            <div class="w011">
+    			<div class="w0110"></div>
+    			<p class="t3 w0101">融资情况</p>
+				<img src="" class="w0111">
+    			<div class="w0110"></div>
+    		</div>
+            <div class="w011">
+    			<div class="w0110"></div>
+    			<p class="t3 w0101">路演情况</p>
+				<img src="" class="w0111">
+    			<div class="w0110"></div>
+    		</div>
+    		<div class="w011">
+    			<div class="w0110"></div>
+    			<img src="" class="w0111">
+    			<div class="w0110"></div>
+    		</div>
+    	</div>
+    </div>
+
+<!-- 项目展示部分 -->
+	{% for p in projects_past %}
+	<div class="w1">
+    	<div class="w10">
+    		当前路演
+    	</div>
+    	<div class="w11">
+    	</div>
+    	<div class="w12">
+      		<div class="w121">
+      			{{ p.name }}
+      		</div>
+	      	<div class="w122">
+	        	<div class="w1220">
+	          		<div class="w12201">
+	          			<img src="../static/img/project/chuangshiren.png">
+	          		</div>
+	          		<div class="w12202">
+	          			Adrian CEO
+	          		</div>
+	        	</div>
+	        	<div class="w1220">
+	          		<div class="w12201">
+	          			<img src="../static/img/project/rongziqingkuang.png">
+	          		</div>
+	          		<div class="w12202">
+	          			天使轮
+	          		</div>
+	        	</div>
+	        	<div class="clearfix">
+	        	</div>
+	      	</div>
+	      	<div class="w123">
+	      		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoret. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fer-meneitum, nulla luctus phearetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+	      	</div>
+	      	<div class="w124">
+	        	<div class="w1240">
+	        		游戏
+	        	</div>
+	        	<div class="w1240">
+	        		社交
+	        	</div>
+	        	<div class="w1240" style="margin:0">
+	        		虚拟现实
+	        	</div>
+	        	<div class="clearfix">
+	        	</div>
+      		</div>
+    	</div>
+	    <div class="w13 purplebg">
+	    	<img src="../static/img/project/seemore.png">
+	    </div>
+	    <div class="clearfix">
+	    </div>
+  	</div>
+	<div class="blank">
+	</div>
+	{% endfor %}
+
+<!-- 分页控件部分 -->
+  	<div class="w2">
+	  <div class="w21">
+		  <img src="../static/img/project/pagesleft.png">
+	  </div>
+	  <div class="w22">
+		  <div class="w220">
+			  1
+		  </div>
+		  <div class="w220">
+			  …
+		  </div>
+		  <div class="w220">
+			  24
+		  </div>
+		  <div class="w220 purplebdbt">
+			  25
+		  </div>
+		  <div class="w220">
+			  26
+		  </div>
+		  <div class="w220">
+			  …
+		  </div>
+		  <div class="w220">
+			  79
+		  </div>
+	  </div>
+	  <div class="w21">
+		  <img src="../static/img/project/pagesright.png">
+	  </div>
+  </div>
+  	<div class="clearfix">
+  	</div>
+
+<!-- js -->
+	<script src="../static/js/project_financing.js"></script>
+<!-- end -->
+
+<!---->
+
+{% endblock %}

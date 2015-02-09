@@ -21,6 +21,8 @@ urlpatterns = patterns('',
 
     # financing
     url(r'^financing/$', financing),
+    # library
+    url(r'^library/$', library),
     # policy
     url(r'^policy/$', policy),
     # community

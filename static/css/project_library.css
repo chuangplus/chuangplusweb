@@ -1,92 +1,35 @@
-.t1
-{
-	margin-top: 0px;
-	font-family: 微软雅黑;
-	font-size: 24px;
-	color: white;
-}
-.t3
-{
-	font-family: 微软雅黑;
-	font-size: 16px;
-	color: white;
-}
 body
 {
 	margin: 0px;
 }
-#content-financing
+#w0
 {
 	width: auto;
-	height: 315px;
-	background-image: url(../img/base-financing/0.jpg);
+	height: 240px;
+	background-image: url(../img/project/0.jpg);
 	background-size: 100% 100%;
-	padding-top: 80px;
+	padding-top: 54px;
 	padding-left: 80px;
 	padding-right: 80px;
+    cursor: default;
 }
-#introduction
+#w00
 {
 	width: auto;
-	height: 92px;
+	line-height: 30px;
 	opacity: 0.85;
 }
-#vertical-line
+#w01
 {
-	width: 5px;
-	height: 92px;
-	background-color: white;
-	opacity: 0.8;
-	margin-right: 25px;
-	float: left;
-}
-#icons
-{
-	width: auto;
-	height: 16px;
-	margin-top: 25px;
-	margin-bottom: 15px;
-	margin-left: 28px;
-    margin-right: 5px;
-}
-.banner
-{
-  margin-right: 5px;
-  width: 16px;
-  height: 16px;
-  opacity: 0.5;
-}
-.banner:hover
-{
-  opacity: 1;
-}
-.title1
-{
-  line-height: 24px;
-  margin-bottom: 14px;
-}
-#horizontal-line
-{
-	width: 560px;
-	height: 2px;
-	border-right: 530px solid white;
-}
-.title2
-{
-  line-height: 21px;
-  margin-top: 10px;
-  width: 560px;
-}
-#options
-{
-	width: 1200px;
+	width: 1189px;
 	height: 70px;
 	background-color: rgba(255,255,255,0.3);
 	padding-top: 12px;
 	padding-bottom: 12px;
     margin: auto;
+    margin-top: 54px;
 }
-#opt0
+.w010
 {
 	width: auto;
 	height: 46px;
@@ -94,40 +37,40 @@ body
 	float: left;
 	margin-left: 10px;
 }
-.opt
+.w0100
+{
+    width: 68px;
+	height: 46px;
+	float: left;
+}
+.w0101 {
+    width: auto;
+    text-align: center;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    float: left;
+}
+.w011
 {
 	width: auto;
 	height: 46px;
 	background-color: #848286;
 	float: left;
 	margin: auto;
+    cursor: pointer;
 }
-.opt:hover
+.w011:hover
 {
 	background-color: #73377f;
 	opacity: 0.8;
 }
-.opt-text
+.w0110
 {
-	width: auto;
-	text-align: center;
-	margin-top: 12px;
-	margin-bottom: 12px;
-	float: left;
-}
-.opt-pos0
-{
-	width: 58px;
-	height: 46px;
-	float: left;
-}
-.opt-pos
-{
-	width: 62px;
+	width: 44px;
 	height:46px;
 	float: left;
 }
-.opt-img
+.w0111
 {
 	width: 16px;
 	height: 16px;
@@ -152,7 +95,7 @@ body
   font-size: 12px;
   padding:5px 0 0 11px;
   color: #f9f9f9;
-  background-image: url(../img/base-financing/label.png);
+  background-image: url(../img/project/label.png);
 }
 .w11{
   height:270px;
