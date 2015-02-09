@@ -24,8 +24,8 @@ class userinfo(models.Model):
 class project(models.Model):
     name = models.CharField(max_length=30)
     field1 = models.CharField(max_length=30)
-    field2 = models.CharField(max_length=30)
-    field3 = models.CharField(max_length=30)
+    field2 = models.CharField(max_length=30,blank=True)
+    field3 = models.CharField(max_length=30,blank=True)
     type = models.CharField(max_length=30)
     slogan = models.CharField(max_length=120)
     summary = models.TextField(blank=True)
@@ -35,15 +35,15 @@ class project(models.Model):
     contact_phone = models.CharField(max_length=30)
     contact_email = models.CharField(max_length=60)
     contact_weixin = models.CharField(max_length=30)
-    link1 = models.CharField(max_length=250)
-    link2 = models.CharField(max_length=250)
-    link3 = models.CharField(max_length=250)
+    link1 = models.CharField(max_length=250,blank=True)
+    link2 = models.CharField(max_length=250,blank=True)
+    link3 = models.CharField(max_length=250,blank=True)
     business_model = models.TextField(blank=True)
     plan = models.TextField(blank=True)
     market_analysis = models.TextField(blank=True)
-    check_status = models.IntegerField(default=0)
-    finance_status = models.IntegerField(default=0)
-    date = models.DateField()
+    is_checked = models.CharField(max_length=30,default="正在审核中")
+    is_roadshowing = models.CharField(max_length=30,default="未路演")
+    date = models.DateField(auto_now_add=True)
 
 # 项目成员表
 class member(models.Model):
