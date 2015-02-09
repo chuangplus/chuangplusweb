@@ -41,7 +41,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.sites',
-	'app',
+    'app',
     'account',
     'pinax_theme_bootstrap',
     'bootstrapform',
@@ -66,6 +66,10 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.contrib.auth.context_processors.auth',
     'pinax_theme_bootstrap.context_processors.theme',
     "account.context_processors.account",
+)
+
+AUTHENTICATION_BACKENDS = (
+    "account.auth_backends.EmailAuthenticationBackend",
 )
 
 ROOT_URLCONF = 'chuangplus.urls'
@@ -121,4 +125,6 @@ STATICFILES_DIRS = (
 
 # account
 
+ACCOUNT_EMAIL_UNIQUE = True
 ACCOUNT_EMAIL_CONFIRMATION_EMAIL = False
+ACCOUNT_USE_AUTH_AUTHENTICATE = True

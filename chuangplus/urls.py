@@ -8,9 +8,9 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'chuangplus.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
-	
+
     url(r'^admin/', include(admin.site.urls)),
-	
+
     # login
     url(r'^login/$', 'app.user.user_login'),
     # logout
@@ -29,11 +29,14 @@ urlpatterns = patterns('',
     # feedback
     url(r'^feedback/$', feedback),
 
-	url(r"^account/", include("account.urls")),
+    # account
+    url(r"^account/login/$", LoginView.as_view(), name="account_login"),
+    url(r"^account/signup/$", SignupView.as_view(), name="account_signup"),
+    url(r"^account/", include("account.urls")),
 
-	# index-investor
+    # index-investor
     url(r'^inv/$', 'app.views.index_inv'),
-	# index
+    # index
     url(r'^$', 'app.views.index', name='home'),
-	
+
 )
