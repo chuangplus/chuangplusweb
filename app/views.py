@@ -45,8 +45,17 @@ def financing(request):
 def library(request):
     user = request.user;
     projects_past = project.objects.all();
+<<<<<<< HEAD
     return render_to_response('project_library.html', {'user':user, 'projects_past':projects_past})
 
+=======
+    return render_to_response('project_financing.html', {'user':user, 'projects_past':projects_past})
+
+def library(request):
+    user = request.user;
+    projects_past = project.objects.all();
+    return render_to_response('project_library.html', {'user':user, 'projects_past':projects_past})
+>>>>>>> 88ea873062e119393e293704238e75f1f92fc760
 
 def policy(request):
     return render_to_response('policy.html', {'request': request}, context_instance=RequestContext(request))

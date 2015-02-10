@@ -19,7 +19,11 @@ urlpatterns = patterns('',
     url(r'^register/$', 'app.user.cyz_register'),
 
     # financing
+<<<<<<< HEAD
     url(r'^financing/$', financing, name="financing"),
+=======
+    url(r'^financing/$', financing),
+>>>>>>> 88ea873062e119393e293704238e75f1f92fc760
     # library
     url(r'^library/$', library),
     # policy

@@ -3,11 +3,12 @@
 {% block content %}
 
 <!-- css -->
-	<link href="../static/css/base_financing.css" rel="stylesheet">
+	<link href="../static/css/project_financing.css" rel="stylesheet">
+	<link href="../static/css/font.css" rel="stylesheet">
 <!-- end -->
 
 <!-- 图片轮播部分 -->
-    <div id="content-financing">
+	<div id="content-financing">
     	<div id="introduction">
     		<div id="vertical-line"></div>
     		<p class="t1 title1">什么是关注项目？</p>
@@ -15,8 +16,8 @@
     		<p class="t3 title2">创+会把您关注的项目放到个人页面您关注的项目内，这样您就可以持续获得您关注的项目的最新信息。</p>
     	</div>
     	<div id="icons">
-			<img id="banner1" class="banner" src="../static/img/base-financing/bannerleftafter.png">
-			<img id="banner2" class="banner" src="../static/img/base-financing/bannerrightafter.png">
+			<img id="banner1" class="banner" src="../static/img/project/bannerleftafter.png">
+			<img id="banner2" class="banner" src="../static/img/project/bannerrightafter.png">
     	</div>
     	<div id="options">
     		<div id="opt0" align="center">
@@ -33,6 +34,7 @@
 			<div id="opt2" class="opt">
     			<div class="opt-pos"></div>
     			<p class="t3 opt-text">领域</p>
+				<img src="" class="opt-img">
     			<div class="opt-pos"></div>
     		</div>
     		<div id="opt3" class="opt">
@@ -146,7 +148,7 @@
 
 <!-- 项目展示部分 -->
 	{% for p in projects_past %}
-  		<div class="w1">
+	<div class="w1">
     	<div class="w10">
     		当前路演
 =======
@@ -180,7 +182,7 @@
 	      	<div class="w122">
 	        	<div class="w1220">
 	          		<div class="w12201">
-	          			<img src="../static/img/base-financing/chuangshiren.png">
+	          			<img src="../static/img/project/chuangshiren.png">
 	          		</div>
 	          		<div class="w12202">
 	          			{{ project.contact_name }}
@@ -188,7 +190,7 @@
 	        	</div>
 	        	<div class="w1220">
 	          		<div class="w12201">
-	          			<img src="../static/img/base-financing/rongziqingkuang.png">
+	          			<img src="../static/img/project/rongziqingkuang.png">
 	          		</div>
 	          		<div class="w12202">
 	          			{{ project.stage }}
@@ -215,20 +217,25 @@
       		</div>
     	</div>
 	    <div class="w13 purplebg">
-	    	<img src="../static/img/base-financing/seemore.png">
+	    	<img src="../static/img/project/seemore.png">
 	    </div>
 	    <div class="clearfix">
 	    </div>
   	</div>
+<<<<<<< HEAD:templates/base_financing.html
 <<<<<<< HEAD
 		<div class="blank">
 		</div>
+=======
+	<div class="blank">
+	</div>
+>>>>>>> 88ea873062e119393e293704238e75f1f92fc760:templates/project_financing.html
 	{% endfor %}
 
 <!-- 分页控件部分 -->
-  <div class="w2">
+  	<div class="w2">
 	  <div class="w21">
-		  <img src="../static/img/base-financing/pagesleft.png">
+		  <img src="../static/img/project/pagesleft.png">
 	  </div>
 	  <div class="w22">
 		  <div class="w220">
@@ -254,14 +261,14 @@
 		  </div>
 	  </div>
 	  <div class="w21">
-		  <img src="../static/img/base-financing/pagesright.png">
+		  <img src="../static/img/project/pagesright.png">
 	  </div>
   </div>
-  <div class="clearfix">
-  </div>
+  	<div class="clearfix">
+  	</div>
 
 <!-- js -->
-	<script src="../static/js/base_financing.js"></script>
+	<script src="../static/js/project_financing.js"></script>
 <!-- end -->
 
 =======

@@ -17,9 +17,9 @@ body
 }
 #content-financing
 {
-	width: auto;
+	width: 1349px;
 	height: 315px;
-	background-image: url(../img/base-financing/0.jpg);
+	background-image: url(../img/project/0.jpg);
 	background-size: 100% 100%;
 	padding-top: 80px;
 	padding-left: 80px;
@@ -79,7 +79,7 @@ body
 }
 #options
 {
-	width: 1200px;
+	width: 1189px;
 	height: 70px;
 	background-color: rgba(255,255,255,0.3);
 	padding-top: 12px;
@@ -136,13 +136,13 @@ body
 }
 .opt-pos0
 {
-	width: 58px;
+	width: 50px;
 	height: 46px;
 	float: left;
 }
 .opt-pos
 {
-	width: 62px;
+	width: 61px;
 	height:46px;
 	float: left;
 }
@@ -171,7 +171,7 @@ body
   font-size: 12px;
   padding:5px 0 0 11px;
   color: #f9f9f9;
-  background-image: url(../img/base-financing/label.png);
+  background-image: url(../img/project/label.png);
 }
 .w11{
   height:270px;
