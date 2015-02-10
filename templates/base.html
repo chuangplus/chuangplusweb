@@ -28,21 +28,12 @@
     <!--link href="{% static "css/flat-ui.min.css" %}" rel="stylesheet">
 	
 	<!-- Base stylesheet -->
-<<<<<<< HEAD
-    <link href="../static/css/style.css" rel="stylesheet">	
-	<link href="../static/css/index.css" rel="stylesheet">
-	<link href="../static/css/user.css" rel="stylesheet">	
-	
-	<!-- FlexSlider pieces -->
-	<link rel="stylesheet" href="../static/css/flexslider.css" type="text/css" media="screen">
-	<script src="../static/js/jquery.flexslider-min.js"></script>
-=======
     <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <link href="{% static "css/index.css" %}" rel="stylesheet">
 	
 	<!-- FlexSlider pieces -->
 	<link rel="stylesheet" href="{% static "css/flexslider.css" %}" type="text/css" media="screen" />
 	<script src="{% static "js/jquery.flexslider-min.js" %}"></script>
->>>>>>> dev-python3
 	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
 	
 	<!-- Header and footer -->
@@ -61,10 +52,7 @@
 	</script>
 
 	<!-- base-fiancing.js-->
-<<<<<<< HEAD
-
-=======
-	<script src="{% static "js/base_financing.js" %}"></script>
+	<script src="{% static "js/project_financing.js" %}"></script>
 
     {% block html5shim %}
         <!-- HTML5 shim, for IE6-8 support of HTML elements -->
@@ -79,8 +67,6 @@
     {% block extra_head_base %}
         {% block extra_head %}{% endblock %}
     {% endblock %}
->>>>>>> dev-python3
-
 </head>
 
 <body class="{% block body_class %}{% endblock %}" id="{% block body_id %}{% endblock %}">

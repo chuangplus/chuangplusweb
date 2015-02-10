@@ -1,10 +1,11 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block content %}
 
 <!-- css -->
-	<link href="../static/css/project_financing.css" rel="stylesheet">
-	<link href="../static/css/font.css" rel="stylesheet">
+	<link href="{% static "css/project_financing.css" %}" rel="stylesheet">
+	<link href="{% static "css/font.css" %}" rel="stylesheet">
 <!-- end -->
 
 <!-- 图片轮播部分 -->
@@ -16,8 +17,8 @@
     		<p class="t3 title2">创+会把您关注的项目放到个人页面您关注的项目内，这样您就可以持续获得您关注的项目的最新信息。</p>
     	</div>
     	<div id="icons">
-			<img id="banner1" class="banner" src="../static/img/project/bannerleftafter.png">
-			<img id="banner2" class="banner" src="../static/img/project/bannerrightafter.png">
+			<img id="banner1" class="banner" src="{% static "img/project/bannerleftafter.png" %}">
+			<img id="banner2" class="banner" src="{% static "img/project/bannerrightafter.png" %}">
     	</div>
     	<div id="options">
     		<div id="opt0" align="center">
@@ -25,28 +26,10 @@
     			<p class="t3 opt-text">筛选项目</p>
     			<div class="opt-pos0"></div>
     		</div>
-<<<<<<< HEAD
-    		<div id="opt1" class="opt">
-    			<div class="opt-pos"></div>
-    			<p class="t3 opt-text">全部</p>
-    			<div class="opt-pos"></div>
-    		</div>
-			<div id="opt2" class="opt">
-    			<div class="opt-pos"></div>
-    			<p class="t3 opt-text">领域</p>
-				<img src="" class="opt-img">
-    			<div class="opt-pos"></div>
-    		</div>
-    		<div id="opt3" class="opt">
-    			<div class="opt-pos"></div>
-    			<p class="t3 opt-text">地区</p>
-    			<img src="" class="opt-img">
-    			<div class="opt-pos"></div>
-=======
 			<div class="opt">
     			<a href="#"><div class="opt-pos"></div>
     			<p class="t3 opt-text">领域</p>
-    			<img src="../static/img/base-financing/xiala.png" class="opt-img">
+    			<img src="{% static "img/base-financing/xiala.png" %}" class="opt-img">
     			<div class="opt-pos"></div></a>
 				<ul>
 					<a href="?field=yx"><li>游戏</li></a>
@@ -74,7 +57,7 @@
     			<a href="#">
     			<div class="opt-pos"></div>
     			<p class="t3 opt-text">地区</p>
-    			<img src="../static/img/base-financing/xiala.png" class="opt-img">
+    			<img src="{% static "img/base-financing/xiala.png" %}" class="opt-img">
     			<div class="opt-pos"></div></a>
 				<ul>
 					<a href="?province=bj"><li>北京</li></a>
@@ -84,17 +67,12 @@
 					<a href="?province=xm"><li>厦门</li></a>
 					<a href="?province=overseas"><li>海外</li></a>
 				</ul>
->>>>>>> dev-python3
     		</div>
             <div class="opt">
     			<a href="#">
     			<div class="opt-pos"></div>
     			<p class="t3 opt-text">类型</p>
-<<<<<<< HEAD
-    			<img src="" class="opt-img">
-    			<div class="opt-pos"></div>
-=======
-    			<img src="../static/img/base-financing/xiala.png" class="opt-img">
+    			<img src="{% static "img/base-financing/xiala.png" %}" class="opt-img">
     			<div class="opt-pos"></div></a>
 				<ul>
 					<a href="?type=1"><li>互联网产品</li></a>
@@ -104,17 +82,12 @@
 					<a href="?type=5"><li>O2O</li></a>
 					<a href="?type=6"><li>其他</li></a>
 				</ul>
->>>>>>> dev-python3
     		</div>
             <div class="opt">
     			<a href="#">
     			<div class="opt-pos"></div>
-<<<<<<< HEAD
-    			<p class="t3 opt-text">融资情况</p>
-    			<img src="" class="opt-img">
-=======
     			<p class="t3 opt-text">阶段</p>
-    			<img src="../static/img/base-financing/xiala.png" class="opt-img">
+    			<img src="{% static "/img/base-financing/xiala.png" %}" class="opt-img">
     			<div class="opt-pos"></div></a>
 				<ul>
 					<a href="?stage=1"><li>天使轮</li></a>
@@ -127,10 +100,9 @@
     		</div>
             <div class="opt">
     			<a href="#">
->>>>>>> dev-python3
     			<div class="opt-pos"></div>
     			<p class="t3 opt-text">推荐</p>
-    			<img src="../static/img/base-financing/xiala.png" class="opt-img">
+    			<img src="{% static "/img/base-financing/xiala.png" %}" class="opt-img">
     			<div class="opt-pos"></div></a>
 				<ul>
 					<a href="?field=1"><li>精选推荐</li></a>
@@ -144,14 +116,6 @@
     		</div>
     	</div>
     </div>
-<<<<<<< HEAD
-
-<!-- 项目展示部分 -->
-	{% for p in projects_past %}
-	<div class="w1">
-    	<div class="w10">
-    		当前路演
-=======
 <!---->
 	<script type="text/javascript">
 	$(document).ready(function(){
@@ -167,22 +131,17 @@
   	<div class="w1">
     	<div class="w10">
     		{{ project.is_roadshowing }}
->>>>>>> dev-python3
     	</div>
     	<div class="w11">
     	</div>
     	<div class="w12">
       		<div class="w121">
-<<<<<<< HEAD
-      			{{ p.name }}
-=======
       			{{ project.name }}
->>>>>>> dev-python3
       		</div>
 	      	<div class="w122">
 	        	<div class="w1220">
 	          		<div class="w12201">
-	          			<img src="../static/img/project/chuangshiren.png">
+	          			<img src="{% static "img/project/chuangshiren.png" %}">
 	          		</div>
 	          		<div class="w12202">
 	          			{{ project.contact_name }}
@@ -190,7 +149,7 @@
 	        	</div>
 	        	<div class="w1220">
 	          		<div class="w12201">
-	          			<img src="../static/img/project/rongziqingkuang.png">
+	          			<img src="{% static "img/project/rongziqingkuang.png" %}">
 	          		</div>
 	          		<div class="w12202">
 	          			{{ project.stage }}
@@ -217,25 +176,20 @@
       		</div>
     	</div>
 	    <div class="w13 purplebg">
-	    	<img src="../static/img/project/seemore.png">
+	    	<img src="{% static "img/project/seemore.png" %}">
 	    </div>
 	    <div class="clearfix">
 	    </div>
   	</div>
-<<<<<<< HEAD:templates/base_financing.html
-<<<<<<< HEAD
-		<div class="blank">
-		</div>
-=======
+
 	<div class="blank">
 	</div>
->>>>>>> 88ea873062e119393e293704238e75f1f92fc760:templates/project_financing.html
 	{% endfor %}
 
 <!-- 分页控件部分 -->
   	<div class="w2">
 	  <div class="w21">
-		  <img src="../static/img/project/pagesleft.png">
+		  <img src="{% static "img/project/pagesleft.png" %}">
 	  </div>
 	  <div class="w22">
 		  <div class="w220">
@@ -261,21 +215,16 @@
 		  </div>
 	  </div>
 	  <div class="w21">
-		  <img src="../static/img/project/pagesright.png">
+		  <img src="{% static "img/project/pagesright.png" %}">
 	  </div>
   </div>
   	<div class="clearfix">
   	</div>
 
 <!-- js -->
-	<script src="../static/js/project_financing.js"></script>
+	<script src="{% static "js/project_financing.js" %}"></script>
 <!-- end -->
 
-=======
-	{% endfor %}
-  	<div class="blank">
-  	</div>
->>>>>>> dev-python3
 <!---->
 
 {% endblock %}
