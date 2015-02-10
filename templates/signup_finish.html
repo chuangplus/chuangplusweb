@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <ul>
+        <li><a href="/">创建我的项目</a></li>
+        <li><a href="{% url "financing" %}">查看正在融资项目</a></li>
+        <li><a href="{% url "redirect_back" %}">返回注册前页面</a></li>
+    </ul>
+
+{% endblock %}

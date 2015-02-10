@@ -40,8 +40,16 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-	'app',
+    'django.contrib.sites',
+    'app',
+    'account',
+    'pinax_theme_bootstrap',
+    'bootstrapform',
+    'captcha',
 )
+
+SITE_ID = 1
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -51,6 +59,18 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "account.middleware.LocaleMiddleware",
+    "account.middleware.TimezoneMiddleware",
+)
+
+TEMPLATE_CONTEXT_PROCESSORS = (
+    'django.contrib.auth.context_processors.auth',
+    'pinax_theme_bootstrap.context_processors.theme',
+    "account.context_processors.account",
+)
+
+AUTHENTICATION_BACKENDS = (
+    "account.auth_backends.EmailAuthenticationBackend",
 )
 
 ROOT_URLCONF = 'chuangplus.urls'
@@ -64,13 +84,20 @@ WSGI_APPLICATION = 'chuangplus.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE' : 'django.db.backends.mysql' ,
-        'NAME' : 'chuangplus' ,
+        'NAME' : 'djangodb' ,
         'USER' : 'root' ,
-        'PASSWORD' : '19950311cly' ,
+        'PASSWORD' : 'THUcj2014' ,
         'HOST' : '127.0.0.1' ,
         'PORT' : '3306' ,
     }
 }
+
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'chuangplusweb.sqlite3'),
+#     }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.7/topics/i18n/
@@ -93,7 +120,19 @@ STATIC_URL = '/static/'
 
 # Import static files like css/js/img 
 STATIC_ROOT = ''
-STATIC_URL = '/static/'
 STATICFILES_DIRS = (
-    os.path.join(os.path.dirname(__file__), '../static/').replace('\\','/'),
+    os.path.join(BASE_DIR, "static"),
 )
+
+# account
+
+ACCOUNT_EMAIL_UNIQUE = True
+ACCOUNT_EMAIL_CONFIRMATION_EMAIL = False
+ACCOUNT_USE_AUTH_AUTHENTICATE = True
+ACCOUNT_SIGNUP_REDIRECT_URL = "/account/signup/finish"
+
+# session
+
+SESSION_COOKIE_AGE = 60*30
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+SESSION_COOKIE_NAME = "CHUANGPLUS_SESSION"
