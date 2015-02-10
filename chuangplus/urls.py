@@ -17,10 +17,11 @@ urlpatterns = patterns('',
     url(r'^logout/$', 'app.user.user_logout'),
     # register
     url(r'^register/$', 'app.user.cyz_register'),
-	
 
     # financing
     url(r'^financing/$', financing, name="financing"),
+    # library
+    url(r'^library/$', library),
     # policy
     url(r'^policy/$', policy),
     # community

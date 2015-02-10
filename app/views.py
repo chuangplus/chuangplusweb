@@ -24,12 +24,6 @@ def index_inv(request):
 
 
 def financing(request):
-<<<<<<< HEAD
-    user = request.user;
-    projects_past = project.objects.all();
-    return render_to_response('base_financing.html', {'user':user, 'projects_past':projects_past})
-	
-=======
     field = request.GET.get('field', '')
     province = request.GET.get('province', '')
     type = request.GET.get('type', '')
@@ -48,7 +42,12 @@ def financing(request):
     }, context_instance=RequestContext(request))
 
 
->>>>>>> dev-python3
+def library(request):
+    user = request.user;
+    projects_past = project.objects.all();
+    return render_to_response('project_library.html', {'user':user, 'projects_past':projects_past})
+
+
 def policy(request):
     return render_to_response('policy.html', {'request': request}, context_instance=RequestContext(request))
 
