@@ -91,7 +91,7 @@ body
 {
 	width: auto;
 	height: 46px;
-	background-color: #73377f;
+	background-color: #8e5a96;
 	float: left;
 	margin-left: 10px;
     cursor: pointer;
@@ -100,15 +100,34 @@ body
 {
 	width: auto;
 	height: 46px;
+	position:relative;
 	background-color: #848286;
 	float: left;
 	margin: auto;
     cursor: pointer;
+	z-index:9999;
 }
 .opt:hover
 {
-	background-color: #73377f;
-	opacity: 0.8;
+	background-color: #8e5a96;
+	opacity: 0.9;
+}
+.opt ul {
+	position: absolute;
+	background: #8e5a96;
+	padding:20px;
+	width: 360px;
+	top: 46px;
+}
+.opt ul li {
+	color:#FFF;
+	display:block;
+	float:left;
+	margin:1px 5px;
+	padding:2px 5px;
+}
+.opt ul li:hover {
+	background:#3e2438;
 }
 .opt-text
 {

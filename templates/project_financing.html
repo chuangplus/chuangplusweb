@@ -1,10 +1,11 @@
 {% extends "base.html" %}
+{% load staticfiles %}
 
 {% block content %}
 
 <!-- css -->
-	<link href="../static/css/project_financing.css" rel="stylesheet">
-	<link href="../static/css/font.css" rel="stylesheet">
+	<link href="{% static "css/project_financing.css" %}" rel="stylesheet">
+	<link href="{% static "css/font.css" %}" rel="stylesheet">
 <!-- end -->
 
 <!-- 图片轮播部分 -->
@@ -16,8 +17,8 @@
     		<p class="t3 title2">创+会把您关注的项目放到个人页面您关注的项目内，这样您就可以持续获得您关注的项目的最新信息。</p>
     	</div>
     	<div id="icons">
-			<img id="banner1" class="banner" src="../static/img/project/bannerleftafter.png">
-			<img id="banner2" class="banner" src="../static/img/project/bannerrightafter.png">
+			<img id="banner1" class="banner" src="{% static "img/project/bannerleftafter.png" %}">
+			<img id="banner2" class="banner" src="{% static "img/project/bannerrightafter.png" %}">
     	</div>
     	<div id="options">
     		<div id="opt0" align="center">
@@ -25,34 +26,88 @@
     			<p class="t3 opt-text">筛选项目</p>
     			<div class="opt-pos0"></div>
     		</div>
-    		<div id="opt1" class="opt">
-    			<div class="opt-pos"></div>
-    			<p class="t3 opt-text">全部</p>
-    			<div class="opt-pos"></div>
-    		</div>
-			<div id="opt2" class="opt">
-    			<div class="opt-pos"></div>
+			<div class="opt">
+    			<a href="#"><div class="opt-pos"></div>
     			<p class="t3 opt-text">领域</p>
-				<img src="" class="opt-img">
-    			<div class="opt-pos"></div>
-    		</div>
-    		<div id="opt3" class="opt">
+    			<img src="{% static "img/base-financing/xiala.png" %}" class="opt-img">
+    			<div class="opt-pos"></div></a>
+				<ul>
+					<a href="?field=yx"><li>游戏</li></a>
+					<a href="?field=sj"><li>社交</li></a>
+					<a href="?field=hlw"><li>互联网</li></a>
+					<a href="?field=rczp"><li>人才招聘</li></a>
+					<a href="?field=jkyl"><li>健康医疗</li></a>
+					<a href="?field=mt"><li>媒体</li></a>
+					<a href="?field=jy"><li>教育</li></a>
+					<a href="?field=wlw"><li>物联网</li></a>
+					<a href="?field=qyfw"><li>企业服务</li></a>
+					<a href="?field=yxtg"><li>营销推广</li></a>
+					<a href="?field=jr"><li>金融</li></a>
+					<a href="?field=ly"><li>旅游</li></a>
+					<a href="?field=cw"><li>宠物</li></a>
+					<a href="?field=yj"><li>硬件</li></a>
+					<a href="?field=ty"><li>体育</li></a>
+					<a href="?field=spyl"><li>视频娱乐</li></a>
+					<a href="?field=ssaq"><li>搜索安全</li></a>
+					<a href="?field=shxf"><li>生活消费</li></a>
+					<a href="?field=whys"><li>文化艺术</li></a>
+				</ul>
+			</div>
+            <div class="opt">
+    			<a href="#">
     			<div class="opt-pos"></div>
     			<p class="t3 opt-text">地区</p>
-    			<img src="" class="opt-img">
-    			<div class="opt-pos"></div>
+    			<img src="{% static "img/base-financing/xiala.png" %}" class="opt-img">
+    			<div class="opt-pos"></div></a>
+				<ul>
+					<a href="?province=bj"><li>北京</li></a>
+					<a href="?province=sh"><li>上海</li></a>
+					<a href="?province=wx"><li>无锡</li></a>
+					<a href="?province=ks"><li>昆山</li></a>
+					<a href="?province=xm"><li>厦门</li></a>
+					<a href="?province=overseas"><li>海外</li></a>
+				</ul>
     		</div>
-    		<div id="opt4" class="opt">
+            <div class="opt">
+    			<a href="#">
     			<div class="opt-pos"></div>
     			<p class="t3 opt-text">类型</p>
-    			<img src="" class="opt-img">
-    			<div class="opt-pos"></div>
+    			<img src="{% static "img/base-financing/xiala.png" %}" class="opt-img">
+    			<div class="opt-pos"></div></a>
+				<ul>
+					<a href="?type=1"><li>互联网产品</li></a>
+					<a href="?type=2"><li>互联网服务</li></a>
+					<a href="?type=3"><li>实体产品</li></a>
+					<a href="?type=4"><li>线下服务</li></a>
+					<a href="?type=5"><li>O2O</li></a>
+					<a href="?type=6"><li>其他</li></a>
+				</ul>
     		</div>
-    		<div id="opt5" class="opt">
+            <div class="opt">
+    			<a href="#">
     			<div class="opt-pos"></div>
-    			<p class="t3 opt-text">融资情况</p>
-    			<img src="" class="opt-img">
+    			<p class="t3 opt-text">阶段</p>
+    			<img src="{% static "/img/base-financing/xiala.png" %}" class="opt-img">
+    			<div class="opt-pos"></div></a>
+				<ul>
+					<a href="?stage=1"><li>天使轮</li></a>
+					<a href="?stage=2"><li>A轮</li></a>
+					<a href="?stage=3"><li>B轮</li></a>
+					<a href="?stage=4"><li>C轮</li></a>
+					<a href="?stage=5"><li>D轮</li></a>
+					<a href="?stage=6"><li>上市</li></a>
+				</ul>
+    		</div>
+            <div class="opt">
+    			<a href="#">
     			<div class="opt-pos"></div>
+    			<p class="t3 opt-text">推荐</p>
+    			<img src="{% static "/img/base-financing/xiala.png" %}" class="opt-img">
+    			<div class="opt-pos"></div></a>
+				<ul>
+					<a href="?field=1"><li>精选推荐</li></a>
+					<a href="?field=1"><li>全部项目</li></a>
+				</ul>
     		</div>
     		<div id="reset" class="opt">
     			<div class="opt-pos"></div>
@@ -61,62 +116,72 @@
     		</div>
     	</div>
     </div>
-
-<!-- 项目展示部分 -->
-	{% for p in projects_past %}
-	<div class="w1">
+<!---->
+	<script type="text/javascript">
+	$(document).ready(function(){
+	$("#options").find("ul").hide();
+	$("#site_wel").hide();				   
+	var wel=$("#site_wel").html();
+	$("#site_info").html(wel);
+	});
+	 $("#options").find(".opt").hover(function(){$(this).find("ul").fadeIn(320);},function(){$(this).find("ul").hide();});
+	</script>
+<!---->
+	{% for project in projects %}
+  	<div class="w1">
     	<div class="w10">
-    		当前路演
+    		{{ project.is_roadshowing }}
     	</div>
     	<div class="w11">
     	</div>
     	<div class="w12">
       		<div class="w121">
-      			{{ p.name }}
+      			{{ project.name }}
       		</div>
 	      	<div class="w122">
 	        	<div class="w1220">
 	          		<div class="w12201">
-	          			<img src="../static/img/project/chuangshiren.png">
+	          			<img src="{% static "img/project/chuangshiren.png" %}">
 	          		</div>
 	          		<div class="w12202">
-	          			Adrian CEO
+	          			{{ project.contact_name }}
 	          		</div>
 	        	</div>
 	        	<div class="w1220">
 	          		<div class="w12201">
-	          			<img src="../static/img/project/rongziqingkuang.png">
+	          			<img src="{% static "img/project/rongziqingkuang.png" %}">
 	          		</div>
 	          		<div class="w12202">
-	          			天使轮
+	          			{{ project.stage }}
 	          		</div>
 	        	</div>
 	        	<div class="clearfix">
 	        	</div>
 	      	</div>
 	      	<div class="w123">
-	      		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoret. Proin gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam fer-meneitum, nulla luctus phearetra vulputate, felis tellus mollis orci, sed rhoncus sapien nunc eget odio.
+	      		{{ project.summary }}
 	      	</div>
 	      	<div class="w124">
 	        	<div class="w1240">
-	        		游戏
+	        		{{ project.field1 }}
 	        	</div>
 	        	<div class="w1240">
-	        		社交
+	        		{{ project.field2 }}
 	        	</div>
 	        	<div class="w1240" style="margin:0">
-	        		虚拟现实
+	        		{{ project.field3 }}
 	        	</div>
 	        	<div class="clearfix">
 	        	</div>
       		</div>
     	</div>
 	    <div class="w13 purplebg">
-	    	<img src="../static/img/project/seemore.png">
+	    	<img src="{% static "img/project/seemore.png" %}">
 	    </div>
 	    <div class="clearfix">
 	    </div>
   	</div>
+
 	<div class="blank">
 	</div>
 	{% endfor %}
@@ -124,7 +189,7 @@
 <!-- 分页控件部分 -->
   	<div class="w2">
 	  <div class="w21">
-		  <img src="../static/img/project/pagesleft.png">
+		  <img src="{% static "img/project/pagesleft.png" %}">
 	  </div>
 	  <div class="w22">
 		  <div class="w220">
@@ -150,7 +215,7 @@
 		  </div>
 	  </div>
 	  <div class="w21">
-		  <img src="../static/img/project/pagesright.png">
+		  <img src="{% static "img/project/pagesright.png" %}">
 	  </div>
   </div>
   	<div class="clearfix">
@@ -281,7 +346,7 @@
     </div>
 
 <!-- js -->
-	<script src="../static/js/project_financing.js"></script>
+	<script src="{% static "js/project_financing.js" %}"></script>
 <!-- end -->
 
 <!---->

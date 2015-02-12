@@ -2,4 +2,4 @@
 chuangplus/settings.py
 .idea/
 *.sqlite3
-
+*.BACKUP.*
