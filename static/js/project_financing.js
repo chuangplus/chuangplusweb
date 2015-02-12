@@ -22,3 +22,60 @@ $("#banner2").click(function(){
     $("#content-financing").css("background-image", title_background[titleNumber]);
 });
 
+//筛选菜单逻辑部分
+var current_menu = {valid:false};
+function showMenu(opt_id, menu_id)
+{
+	hideMenu('#quanbu');
+	hideMenu('#lingyu');
+    $(menu_id).css('display','block');
+    $(menu_id).css('left',$(opt_id).position().left);
+    $(menu_id).css('top',$(opt_id).position().top+$(opt_id).height()+4);
+    current_menu = {
+    	valid:true,
+    	opt:opt_id,
+    	menu:menu_id,
+    	left:$(opt_id).position().left,
+	    top1:$(opt_id).position().top,
+	    top2:$(opt_id).position().top + $(opt_id).height() + 4,
+	    bottom:$(opt_id).position().top + $(opt_id).height() + 4 + $(menu_id).height(),
+	    right1:$(opt_id).position().left + $(opt_id).width(),
+	    right2:$(opt_id).position().left + $(menu_id).width()
+	};
+}
+
+function hideMenu(menu_id)
+{
+	$(menu_id).css('display','none');
+	current_menu.valid=false;
+}
+
+$('#opt1').mouseover(function(){
+    showMenu('#opt1','#quanbu');
+});
+
+$('#opt2').mouseover(function(){
+    showMenu('#opt2','#lingyu');
+});
+
+function atCurrentMenu(x, y)
+{
+	with(current_menu)
+	{
+		if (x<left||x>right2||y<top1||y>bottom||(x>right1&&y<top2))
+			return false;
+		return true;
+	}
+}
+
+document.addEventListener('mousemove',function(e)
+{
+	if (!current_menu.valid)
+		return;
+	if (!atCurrentMenu(e.x, e.y))
+	{
+		hideMenu(current_menu.menu);
+	}
+});
+
+//$(".w300").click(function(){;});

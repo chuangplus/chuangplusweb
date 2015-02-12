@@ -20,6 +20,12 @@ def financing(request):
     projects_past = project.objects.all();
     return render_to_response('project_financing.html', {'user':user, 'projects_past':projects_past})
 
+def financing_opt(request, options):
+    user = request.user;
+    opt = int(options);
+    projects_past = project.objects.all();
+    return render_to_response('project_financing.html', {'opt':opt, 'user':user, 'projects_past':projects_past})
+
 def library(request):
     user = request.user;
     projects_past = project.objects.all();

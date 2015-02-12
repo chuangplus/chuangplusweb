@@ -20,7 +20,8 @@ urlpatterns = patterns('',
 	
 
     # financing
-    url(r'^financing/$', financing),
+    url(r'^financing/$', 'app.views.financing'),
+    url(r'^financing/(\d{1,2})/$', 'app.views.financing_opt'),
     # library
     url(r'^library/$', library),
     # policy

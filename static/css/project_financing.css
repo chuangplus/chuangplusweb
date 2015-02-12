@@ -24,6 +24,7 @@ body
 	padding-top: 80px;
 	padding-left: 80px;
 	padding-right: 80px;
+    cursor: default;
 }
 #introduction
 {
@@ -93,6 +94,7 @@ body
 	background-color: #73377f;
 	float: left;
 	margin-left: 10px;
+    cursor: pointer;
 }
 .opt
 {
@@ -101,6 +103,7 @@ body
 	background-color: #848286;
 	float: left;
 	margin: auto;
+    cursor: pointer;
 }
 .opt:hover
 {
@@ -256,6 +259,32 @@ body
   padding:20px 22px 40px 13px;
   background-color: #f2f2f2;
 }
+.w3{
+  position:absolute;
+  display: none;
+  width:339.5px;
+  height:186px;
+  z-index: 100;
+  color:#f9f9f9;
+  font-family: '微软雅黑 Regular', '微软雅黑';
+  font-size:11px;
+  background-color: rgba(139,96,155,0.9);
+  padding:0 0 0 20.5px;
+}
+.w30{
+  float:left;
+  margin:19.5px 3px 19.5px 0;
+}
+.w300{
+  padding:5.5px 9.5px 5.5px 9.5px;
+  margin-bottom: 8px;
+  line-height: 12px;
+  cursor: pointer;
+}
+.w300:hover
+{
+  background-color: rgba(61,34,67,1);
+}
 .purplebdbt{
   border-bottom: 4px solid #c45fd9;
 }
@@ -270,4 +299,7 @@ body
 }
 .blank{
   height:15px;
+}
+.purplew3{
+  background-color: rgba(61,34,67,1);
 }
