@@ -44,6 +44,10 @@
 	<link href="{% static "css/staticpage.css" %}" rel="stylesheet">
 	<script src="{% static "js/about.js" %}"></script>
 	
+    <!-- projectdetail -->
+    <link href="{% static "css/projectdetail.css" %}" rel="stylesheet">
+    <script src="{% static "js/projectdetail.js" %}"></script>
+
 	<!-- Hook up the FlexSlider -->
 	<script type="text/javascript">
 		$(window).load(function() {
@@ -88,7 +92,7 @@
                                 </div>
                                 <div id="header-navbar-brand" class="navbar-brand">
                                     <a style="font-size: 15px;">创加与您携手创业</a>
-                                    <a style="font-size: 11px;">CHUANGPLUS.COM</a>
+                                    <a style="font-size: 11px; letter-spacing: 0.5px;">CHUANGPLUS.COM</a>
                                 </div>
                                 {% endblock %}
                             </div>
@@ -118,13 +122,11 @@
         {% endblock %}
 
         {% block footer_base %}
-            <hr />
+            <div id="endoftext"></div>
             <footer>
-                <div class="container">
-                    {% block footer %}
-                        {% include "footer.html" %}
-                    {% endblock %}
-                </div>
+                {% block footer %}
+                    {% include "footer.html" %}
+                {% endblock %}
             </footer>
         {% endblock %}
     </div>

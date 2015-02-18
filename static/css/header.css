@@ -1,9 +1,6 @@
 #chuangp-header {
 	font-family: "微软雅黑";
 }
-.navbar {
-	margin-bottom:0;
-}
 .navbar, .navbar-header {
 	min-height: 110px;
 }
@@ -14,20 +11,16 @@
 	position: relative;
 	width: 100%;
 	height: 110px;
+	margin-bottom: 0;
+	border: 0;
+	background-image: url(../img/header/topbg.png);
+	background-repeat: repeat-x;
+	background-position: top;
 }
 #headercontainer {
-	position: absolute;
-	width: 100%;
 	height: 110px;
-	top: 50%;
-	left: 50%;
-	margin-top: -55px;
-	margin-left: -50%;
-	padding-right: 80px;
-	padding-left: 80px;
-	background-image: url(../img/header/topbg.png);
-	background-repeat-y: no-repeat;
-	background-position: top;
+	padding-right: 0;
+	padding-left: 0;
 }
 #header-navbar-logo {
 	height: 110px;
@@ -39,6 +32,8 @@
 .navbar-inverse .navbar-nav>li>a, 
 .navbar-inverse .navbar-brand>a {
 	color: #606060;
+	line-height: 90%;
+	text-decoration: none;
 }
 .navbar-inverse .navbar-nav>li>a:hover, 
 .navbar-inverse .navbar-nav>li>a:focus, 

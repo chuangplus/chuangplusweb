@@ -73,6 +73,10 @@ def feedback(request):
     return render_to_response('feedback.html', {'request': request}, context_instance=RequestContext(request))
 
 
+def projectdetail(request):
+    return render_to_response('projectdetail.html', {'request': request}, context_instance=RequestContext(request))
+
+
 def redirect_back(request):
     redirect_url = request.session.get('referer', None)
     if redirect_url is None:

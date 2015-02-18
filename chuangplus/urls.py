@@ -12,12 +12,9 @@ urlpatterns = patterns('',
     url(r'^admin/', include(admin.site.urls)),
 
     # financing
-<<<<<<< HEAD
     url(r'^financing/$', 'app.views.financing'),
     url(r'^financing/(\d{1,2})/$', 'app.views.financing_opt'),
-=======
     url(r'^financing/$', financing, name="financing"),
->>>>>>> origin/master
     # library
     url(r'^library/$', library),
     # policy
@@ -30,7 +27,9 @@ urlpatterns = patterns('',
     url(r'^contract/$', contract, name="contract"),
     # feedback
     url(r'^feedback/$', feedback, name="feedback"),
-    # feedback
+    # projectdetail
+    url(r'^projectdetail/$', projectdetail, name="projectdetail"),
+    # redirect_back
     url(r'^redirect_back/$', redirect_back, name="redirect_back"),
 
     # account
