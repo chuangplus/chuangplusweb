@@ -37,9 +37,9 @@
 }
 .navbar-inverse .navbar-nav>li>a:hover, 
 .navbar-inverse .navbar-nav>li>a:focus, 
-.navbar-inverse .navbar-nav>.active>a, 
-.navbar-inverse .navbar-nav>.active>a:hover, 
-.navbar-inverse .navbar-nav>.active>a:focus {
+.navbar-inverse .navbar-nav>.activeheader>a, 
+.navbar-inverse .navbar-nav>.activeheader>a:hover, 
+.navbar-inverse .navbar-nav>.activeheader>a:focus {
 	color: rgba(96,96,96,0.7);
 	background-color: #ffffff;
 	background-image: url(../img/header/top.png);
@@ -74,7 +74,7 @@
 }
 .navbar-inverse .navbar-form .form-control {
 	height: 30px;
-	width: 200px;
+	width: 230px;
 	background-color: rgba(96,96,96,0.1);
 	border-color: rgba(96,96,96,0.3);
 	border-radius: 0;

@@ -8,6 +8,14 @@
 	<link href="{% static "css/font.css" %}" rel="stylesheet">
 <!-- end -->
 
+<script type="text/javascript">
+    function init() {
+        $(".activeheader").removeClass("activeheader");
+        $("#financing").addClass("activeheader");
+    }
+    window.onload=init;
+</script>
+
 <!-- 图片轮播部分 -->
 	<div id="content-financing">
     	<div id="introduction">
