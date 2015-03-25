@@ -11,7 +11,7 @@
 	<meta name="keywords" content="创加 创+ 创业 融资 高校 投资 大学生 ">
 	
 	<!-- Loading jQuery -->
-	<script src="{% static "lib/js/jquery-1.11.2.min.js" %}"></script>
+	<script src="{% static "lib/js/jquery-2.1.3.min.js" %}"></script>
 
     <!-- Loading Bootstrap -->
     <link href="{% static "lib/css/vendor/bootstrap.min.css" %}" rel="stylesheet">
@@ -132,7 +132,7 @@
     </div>
 
     {% block script_base %}
-        <script src="{% block jquery_src %}{% static "lib/jquery/js/jquery-2.1.1.min.js" %}{% endblock %}"></script>
+        <script src="{% block jquery_src %}{% static "lib/js/jquery-2.1.3.min.js" %}{% endblock %}"></script>
         <script src="{% static "lib/js/bootstrap/bootstrap.min.js" %}"></script>
 <!--    <script src="{% static "pinax/js/theme.js" %}"></script> -->
         {% block extra_script %}{% endblock %}
