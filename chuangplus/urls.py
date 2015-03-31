@@ -31,7 +31,10 @@ urlpatterns = patterns('',
     url(r'^projectdetail/$', projectdetail, name="projectdetail"),
     # redirect_back
     url(r'^redirect_back/$', redirect_back, name="redirect_back"),
-
+    # create_myproject
+    url(r'^create_myproject/step(\d{1,1})/$','app.views.create_myproject'),
+    # upload my_project_info
+    url(r'^project_info_step(\d{1,1})/$','app.views.project_info'),
     # account
     url(r"^account/login/$", LoginView.as_view(), name="account_login"),
     url(r"^account/signup/$", SignupView.as_view(), name="account_signup"),
