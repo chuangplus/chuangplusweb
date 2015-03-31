@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% load i18n %}
+{% block content %}
+<form class="project_info_step5" action="/project_info_step5/" method="POST">
+  {% csrf_token %}
+  <div id="basic_info" style="width:60%;margin:0 auto;">
+  	<div class="page-header">
+	  	<h1>Step one<small>basic information</small></h1>
+	</div>
+	<div class="form-group">
+		<label for="project-name">{% trans "Project Name" %}</label>
+	  	<input name="projectname" type="text" class="form-control" value="" placeholder="Enter your project name" id="project_name" />
+	</div>
+	<div class="form-group">
+		<label for="project-logo">{% trans "Project Logo" %}</label>
+	  	<input name="projectlogo" type="file" class="form-control" value="" placeholder="upload you project logo" id="project_logo" />
+	</div>
+
+	<div class="form-group">
+		<label for="name">{% trans "Project Field" %}</label>
+		<div>
+		   <label class="checkbox-inline">
+		      <input type="checkbox" id="inlineCheckbox1" value="option1">教育
+		   </label>
+		   <label class="checkbox-inline">
+		      <input type="checkbox" id="inlineCheckbox2" value="option2">金融
+		   </label>
+		   <label class="checkbox-inline">
+		      <input type="checkbox" id="inlineCheckbox3" value="option3">社交
+		   </label>
+		   	<label class="checkbox-inline">
+		      <input type="checkbox" id="inlineCheckbox3" value="option3">游戏
+		   </label>
+		   		   <label class="checkbox-inline">
+		      <input type="checkbox" id="inlineCheckbox3" value="option3">媒体
+		   </label>
+		   		   <label class="checkbox-inline">
+		      <input type="checkbox" id="inlineCheckbox3" value="option3">体育
+		   </label>
+		   		   <label class="checkbox-inline">
+		      <input type="checkbox" id="inlineCheckbox3" value="option3">旅游
+		   </label>
+		   		   <label class="checkbox-inline">
+		      <input type="checkbox" id="inlineCheckbox3" value="option3">硬件
+		   </label>
+		   		   <label class="checkbox-inline">
+		      <input type="checkbox" id="inlineCheckbox3" value="option3">工具
+		   </label>
+		   		   <label class="checkbox-inline">
+		      <input type="checkbox" id="inlineCheckbox3" value="option3">电子商务
+		   </label>
+		   		   <label class="checkbox-inline">
+		      <input type="checkbox" id="inlineCheckbox3" value="option3">生活消费
+		   </label>
+		   		   <label class="checkbox-inline">
+		      <input type="checkbox" id="inlineCheckbox3" value="option3">健康医疗
+		   </label>
+		   		   		   <label class="checkbox-inline">
+		      <input type="checkbox" id="inlineCheckbox3" value="option3">营销广告
+		   </label>
+		   		   		   <label class="checkbox-inline">
+		      <input type="checkbox" id="inlineCheckbox3" value="option3">文化艺术
+		   </label>
+		   		   		   <label class="checkbox-inline">
+		      <input type="checkbox" id="inlineCheckbox3" value="option3">视频娱乐
+		   </label>
+		   		   		   <label class="checkbox-inline">
+		      <input type="checkbox" id="inlineCheckbox3" value="option3">房产汽车
+		   </label>
+		   		   		   <label class="checkbox-inline">
+		      <input type="checkbox" id="inlineCheckbox3" value="option3">企业服务
+		   </label>
+		   		   		   <label class="checkbox-inline">
+		      <input type="checkbox" id="inlineCheckbox3" value="option3">能源材料
+		   </label>
+		   		   		   <label class="checkbox-inline">
+		      <input type="checkbox" id="inlineCheckbox3" value="option3">搜索安全
+		   </label>
+		   	<label class="checkbox-inline">
+		      <input type="checkbox" id="inlineCheckbox3" value="option3">移动互联网
+		    </label>
+		</div>
+	</div>
+	<div class="form-group">
+      <label for="name">{% trans "Project Type" %}</label>
+      <select class="form-control">
+         <option>互联网产品</option>
+         <option>互联网服务</option>
+         <option>实体产品</option>
+         <option>线下服务</option>
+         <option>O2O</option>
+         <option>其他</option>
+      </select>
+    </div>
+	<div class="form-group">
+    	<label for="name">{% trans "Project General" %}</label>
+    	<textarea class="form-control" rows="3"></textarea>
+  	</div>
+    <div class="form-group">
+      <label for="name">{% trans "Project Type" %}</label>
+      <select class="form-control">
+         <option>北京</option>
+         <option>上海</option>
+         <option>无锡</option>
+         <option>昆山</option>
+         <option>厦门</option>
+         <option>海外</option>
+      </select>
+    </div>
+    <div class="form-group">
+    	<label for="name">{% trans "Project financing" %}</label>
+    	<label class="checkbox-inline">
+      		<input type="radio" name="optionsRadiosinline" id="optionsRadios3" 
+         value="option1" checked>是
+   		</label>
+	   <label class="checkbox-inline">
+	      <input type="radio" name="optionsRadiosinline" id="optionsRadios4" 
+	         value="option2">否
+	   </label>
+    </div>
+	<input type="submit" value="暂存" class="btn btn-primary" />
+  </div>
+</form>
+<nav>
+  <ul class="pager">
+    <li><a href="/create_myproject/step4">Previous</a></li>
+    <li><a href="/create_myproject/step6">Next</a></li>
+  </ul>
+</nav>
+{% endblock %}

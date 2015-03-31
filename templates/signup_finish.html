@@ -6,7 +6,7 @@ wapper
 {% block content %}
 
     <ul class="list-group">
-        <li class="list-group-item"><a href="/">创建我的项目</a></li>
+        <li class="list-group-item"><a href="{% url "create_myproject/step1" %}">创建我的项目</a></li>
         <li class="list-group-item"><a href="{% url "financing" %}">查看正在融资项目</a></li>
         <li class="list-group-item"><a href="{% url "redirect_back" %}">返回注册前页面</a></li>
     </ul>
