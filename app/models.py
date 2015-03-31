@@ -1,7 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.db import models
 from account.compat import AUTH_USER_MODEL
-
+import json
+import re
 # Create your models here.
 
 # 用户信息表

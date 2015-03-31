@@ -8,7 +8,7 @@ import account.models
 import account.views
 from account.utils import default_redirect
 from account.decorators import login_required
-
+from django.http import HttpResponse
 
 # Create your views here.
 
@@ -94,6 +94,29 @@ def signup_finish(request):
 @login_required
 def signup_inv_finish(request):
     return render_to_response('signup_inv_finish.html', {'request': request}, context_instance=RequestContext(request))
+
+@login_required
+def create_myproject(request,steps):
+    try:
+        step = int(steps)
+    except Exception, e:
+        raise e
+    return render_to_response('create_myproject/step'+str(step)+'.html',{'request': request}, context_instance=RequestContext(request))
+
+@login_required
+def project_info(request,steps):
+    re = dict()
+    if request.method=='POST':
+        try:
+            step = int(steps)
+            print step
+        except Exception, e:
+            raise e
+        if step == 1:
+            re['error']={'errroCode':1,'errorMsg':'成功'}
+        else:
+            re['error']={'errroCode':2,'errorMsg':'失败'}
+    return HttpResponse(json.dumps(re), content_type = 'application/json')
 
 
 class LoginView(account.views.LoginView):
